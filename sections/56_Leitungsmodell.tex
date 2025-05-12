@@ -107,13 +107,10 @@ $
 - \frac{\underline{U}_1}{Z_W} \cdot \sinh(\underline{\gamma} x)}
 $
 
-$
-\boxed{}
-$
 
 \newcolumn
 \subsection{Allgemein und für 50Hz}
-\subsubsection{Modell Allgemein}
+\subsubsection{Modell Allgemein mit exakter Zweitor-Gleichung}
 
 \includegraphics[width=0.98\columnwidth, align=c]{images/Leitungsgleichungen_1.png}
 
@@ -126,13 +123,17 @@ $\boxed{
     \end{pmatrix}
     =
     \begin{pmatrix}
-    \cosh(\underline{\gamma} \cdot l) & Z_W \cdot \sinh(\underline{\gamma} \cdot l) \\
-    \frac{1}{Z_W} \cdot \sinh(\underline{\gamma} \cdot l) & \cosh(\underline{\gamma} \cdot l)
+    \cosh(\underline{\gamma} \cdot l) & \underline{Z}_W \cdot \sinh(\underline{\gamma} \cdot l) \\
+    \frac{1}{\underline{Z}_W} \cdot \sinh(\underline{\gamma} \cdot l) & \cosh(\underline{\gamma} \cdot l)
     \end{pmatrix}
     \begin{pmatrix}
-    U_2 \\
+    \underline{U}_2 \\
     \underline{I}_2
 \end{pmatrix}}
+$
+
+$
+\boxed{\underline{\gamma} = \sqrt{(R' + j\omega L')(G' + j \omega C')} = \alpha + j\beta}
 $
 
 
