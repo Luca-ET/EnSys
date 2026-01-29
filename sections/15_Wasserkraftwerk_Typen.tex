@@ -23,6 +23,7 @@
             \item Blockbauweise
             \item Buchtenkraftwerke
             \item Zwillingsbauweise (beidseitige Anordnung)
+            \item Ausleitkraftwerke
             \item \dots
         \end{itemize}
         \item Ausleitungskraftwerke
@@ -88,7 +89,7 @@
 
 
 
-\subsection{Laufwasserkraftwerke LWK}
+\subsection{Laufwasserkraftwerke (LWK)}
 
 \begin{center}
     \includegraphics[width=0.95\columnwidth, align=c]{images/Laufwasserkraftwerke.png}
@@ -114,7 +115,7 @@
     \end{tabular}
 \end{minipage}
 
-
+\newcolumn
 
 \subsection{LWK mit Kaplanturbinen}
 
@@ -194,7 +195,21 @@
         18 & Dammbalkenkran \\
     \end{tabular}
 \end{minipage}
+\subsection{Wasserwirbelkraftwerk}
 
+\begin{minipage}[c]{0.58\columnwidth}
+    \begin{itemize}
+    \item Für Kleinwasserkraft
+    \item Geringe Fallhöhen und Durchfluss möglich:\\
+    $h \geqq 0.5\text{m}$ und $Q \geqq 0.5 \frac{\text{m}^3}{\text{s}}$
+    \item Geringerer Wirkungsgrad
+    \item Besser Fischgängig
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.38\columnwidth}
+    \includegraphics[width=0.65\columnwidth, align=c]{images/Wasserwirbelkraftwerk.jpg}
+\end{minipage}
 
 \newcolumn
 \subsection{LWK mit Strafloturbinen}
@@ -239,49 +254,7 @@
     \item (<= 5 bar Druck)
 \end{itemize}
 
-
-\subsection{Hochdruck- (Speicher-) Anlagen}
-
-\begin{itemize}
-    \item ab circa 50m Fallhöhe
-    \item (> 5 bar Druck, bis weit über 100 bar möglich)
-\end{itemize}
-
-\begin{center}
-    \includegraphics[width=0.95\columnwidth, align=c]{images/Hochdruckspeicheranlagen.png}
-\end{center}
-
-\begin{minipage}[t]{0.48\columnwidth}
-    \begin{tabular}{c l}
-        1 & Stausee \\
-        2 & Wasserfassung \\
-        3 & Freispiegelstollen (keine Druckleitung) \\
-        4 & Staumauer \\
-        5 & Grundablass (für kontrollierten Ablauf) \\
-        6 & Hochwasserentlastung (= Überlauf) \\
-        7 & Einlauf \\
-        8 & Drosselklappe \\
-        9 & Druckstollen \\
-    \end{tabular}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.48\columnwidth}
-    \begin{tabular}{c l}
-        10 & Wasserschloss \\
-        11 & Druckschacht \\
-        12 & Zentrale \\
-        13 & Turbine \\
-        14 & Kugelschieber \\
-        15 & Generator \\
-        16 & Energieableitung, Transformatoren \\
-        17 & Schaltanlage \\
-        18 & Unterwasserstollen \\
-    \end{tabular}
-\end{minipage}
-
-
-
-\subsection{Pumpspeicherkraftwerke PSW}
+\subsection{Pumpspeicherkraftwerke (PSW)}
 
 \begin{itemize}
     \item Pumpspeicherkraftwerk mit konventionellem Maschinensatz (Dreimaschinensatz)
@@ -289,7 +262,7 @@
 \end{itemize}
 
 \begin{center}
-    \includegraphics[width=0.95\columnwidth, align=c]{images/Pumpspeicherkraftwerke.png}
+    \includegraphics[width=0.75\columnwidth, align=c]{images/Pumpspeicherkraftwerke.png}
 \end{center}
 
 \begin{minipage}[t]{0.48\columnwidth}
@@ -310,6 +283,130 @@
     \end{tabular}
 \end{minipage}
 
+\subsubsection{Maschinensatz}
+\begin{tabular}{c c}
+    Zweimaschinensatz:  & Motor/Generator und Pumpturbine \\
+    Dreimaschinenesatz: & Motor/Generator, Turbine und Pumpe
+\end{tabular}
+\newcolumn
+
+\subsection{Hochdruck- (Speicher-) Anlagen}
+
+\begin{itemize}
+    \item ab circa 50m Fallhöhe
+    \item (> 5 bar Druck, bis weit über 100 bar möglich)
+\end{itemize}
+
+\begin{center}
+    \includegraphics[width=0.85\columnwidth, align=c]{images/Hochdruckspeicheranlagen.png}
+\end{center}
+
+\begin{minipage}[t]{0.48\columnwidth}
+    \begin{tabular}{c l}
+        1 & Stausee \\
+        2 & Wasserfassung \\
+        3 & Freispiegelstollen (keine Druckleitung) \\
+        4 & Staumauer \\
+        5 & Grundablass (für kontrollierten Ablauf) \\
+        6 & Hochwasserentlastung (= Überlauf) \\
+        7 & Einlauf \\
+        8 & Drosselklappe\\ & (Wasserfluss Druckstollen steuern) \\
+        9 & Druckstollen \\
+    \end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\columnwidth}
+    \begin{tabular}{c l}
+        10 & Wasserschloss (Druckausgleich\\ & Änderung Wasserdurchfluss) \\
+        11 & Druckschacht \\
+        12 & Zentrale \\
+        13 & Turbine \\
+        14 & Kugelschieber \\
+        15 & Generator \\
+        16 & Energieableitung, Transformatoren \\
+        17 & Schaltanlage \\
+        18 & Unterwasserstollen \\
+    \end{tabular}
+\end{minipage}
+\subsubsection{Stollen und Schächte}
+
+\begin{tabular}{l l}
+     Freispiegelstollen: &  flach, nicht voll gefüllt, Umgebungsdruck\\
+     Druckstollen (Betonverkl.): & flach, voll gefüllt, Druck $>$ Umgebungsdr. , $v < 5\,\mathrm{m/s}$ \\
+     Druckschacht (Stahlpanzerung): & steil, voll gefüllt, Druck $\gg$ Umgebungdr. , $v < 9\,\mathrm{m/s}$ 
+\end{tabular}
+
+
+
+\subsection{Wasserschloss}
+Das Wasserschloss ist ein nach oben offenes Gefäss.
+Im Druckstollen sind grosse Wassermassen vorhanden. Diese Wassermassen müssen:
+
+\begin{itemize}
+    \item beim Anfahren der Maschinengruppen beschleunigt,
+    \item beim Abstellen gebremst werden.
+\end{itemize}
+Das Wasserschloss dient als Puffer
+
+\begin{center}
+    \includegraphics[width=0.75\columnwidth, align=c]{images/Wasserschloss.jpg}
+\end{center}
+
+
+$
+\boxed{V_{\mathrm{St}} = l_{\mathrm{St}} \cdot A_{\mathrm{St}}} 
+\quad
+\boxed{m_{\mathrm{wSt}} = \rho_{\mathrm{w}} \cdot V_{\mathrm{St}}}
+\quad
+\boxed{v_{\mathrm{St}}= \frac{Q}{A_{\mathrm{St}}}}\\
+\quad
+\boxed{V_{\mathrm{s}} = l_{\mathrm{s}} \cdot A_{\mathrm{s}}^2}
+\quad
+\boxed{m_{\mathrm{ws}} = \rho_{\mathrm{w}} \cdot V_{\mathrm{St}}}
+\quad
+\boxed{v_{\mathrm{s}}= \frac{Q}{A_{\mathrm{s}}}}\\
+\quad
+\boxed{E_{\mathrm{kSt}} = \frac{m_{\mathrm{wSt}} \cdot V_{\mathrm{St}}}{2}}
+\quad
+\boxed{E_{\mathrm{ks}} = \frac{m_{\mathrm{ws}} \cdot V_{\mathrm{s}}}{2}}
+\quad
+\boxed{E_{\mathrm{ktot}} = E_{\mathrm{kSt}}+E_{\mathrm{ks}}}\\
+\quad
+\boxed{E_{\mathrm{pot}} = E_{\mathrm{ktot}}}
+\quad
+\quad
+\boxed{h_{\mathrm{ws}} = \sqrt{\frac{E_{\mathrm{pot}} \cdot 2}{\rho_{\mathrm{w}} \cdot A_{\mathrm{ws}} \cdot g}}}
+$
+\vspace{0.15cm}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{} l p{7cm} l @{}}    
+    $[l_{\mathrm{St}}]$     & Stollenlänge \dotfill                                         & $\mathrm{m}$ \\
+    $[A_{\mathrm{St}}]$     & Stollenfläche \dotfill                                        & $\mathrm{m^2}$ \\
+    $[V_{\mathrm{St}}]$     & Stollenvolumen \dotfill                                       & $\mathrm{m^3}$ \\
+    $[m_{\mathrm{wSt}}]$    & Wassermasse im Stollen \dotfill                               & $\mathrm{kg}$ \\
+    $[v_{\mathrm{wSt}}]$    & Fliessgeschwindigkeit im Stollen \dotfill                     & $\mathrm{m/s}$ \\
+    $[\rho_{\mathrm{w}}]$   & Dichte des Wassers ($1000\, \mathrm{kg/m^3}$) \dotfill        & $\mathrm{kg/m^3}$ \\
+    $[Q]$                   & Druchfluss \dotfill                                           &$\mathrm{m^3/s}$\\
+    $[l_{\mathrm{s}}]$      & Schachtlänge \dotfill                                         & $\mathrm{m}$ \\
+    $[A_{\mathrm{s}}]$      & Schachtfläche \dotfill                                        & $\mathrm{m^2}$ \\
+    $[V_{\mathrm{s}}]$      & Schachtvolumen \dotfill                                       & $\mathrm{m^3}$ \\
+    $[m_{\mathrm{ws}}]$     & Wassermasse im Schacht \dotfill                               & $\mathrm{kg}$ \\
+    $[v_{\mathrm{s}}]$      & Fliessgeschwindigkeit im Schacht\dotfill                      & $\mathrm{m/s}$ \\
+    $[E_{\mathrm{kSt}}]$    & Kinetische Energie im Stollen                                 & $\mathrm{J}$\\
+    $[E_{\mathrm{ks}}]$     & Kinetische Energie im Schacht                                 & $\mathrm{J}$\\
+    $[E_{\mathrm{pot}}]$    & Potentielle Energie                                           & $\mathrm{J}$\\
+    $[A_{\mathrm{ws}}]$     & Wasserschlossfläche \dotfill                                  & $\mathrm{m^2}$ \\
+    $[h_{\mathrm{ws}}]$     & Höhe des Wasserspiegels im Wasserschloss \dotfill             & $\mathrm{m^2}$ \\
+    $[g]$                   & Fallbeschleunigung $(9.81\, \mathrm{m/s^2})$ \dotfill         & $\mathrm{m^2}$ \\
+    
+    
+    
+    
+
+    
+    
+\end{tabular}
 
 \subsection{Gezeitenkraftwerke}
 
@@ -324,26 +421,9 @@
 \subsection{Wellenkraftwerk}
 
 \subsubsection{Wellenkraftwerk mit Pneumatischer Kammer}
-\includegraphics[width=0.65\columnwidth, align=c]{images/Wellenkraft mit Pneumatischer Kammer.png}
+\includegraphics[width=0.55\columnwidth, align=c]{images/Wellenkraft mit Pneumatischer Kammer.png}
 
 
 \subsubsection{Wellenkraftwerk mit Rampe}
-\includegraphics[width=0.65\columnwidth, align=c]{images/Wellenkraft mit Rampe.png}
+\includegraphics[width=0.55\columnwidth, align=c]{images/Wellenkraft mit Rampe.png}
 
-
-
-\subsection{Wasserwirbelkraftwerk}
-
-\begin{minipage}[c]{0.58\columnwidth}
-    \begin{itemize}
-    \item Für Kleinwasserkraft
-    \item Geringe Fallhöhen und Durchfluss möglich:\\
-    $h \geqq 0.5\text{m}$ und $Q \geqq 0.5 \frac{\text{m}^3}{\text{s}}$
-    \item Geringerer Wirkungsgrad
-    \item Besser Fischgängig
-\end{itemize}
-\end{minipage}
-\hfill
-\begin{minipage}[c]{0.38\columnwidth}
-    \includegraphics[width=0.65\columnwidth, align=c]{images/Wasserwirbelkraftwerk.jpg}
-\end{minipage}

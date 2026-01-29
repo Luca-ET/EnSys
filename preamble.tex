@@ -17,7 +17,7 @@
 \usepackage{tabu}                   % more flexible tables
 \usepackage{hhline}                 % double lines in tables
 \usepackage{booktabs}               % thick and thin lines in tables
-\usepackage{boldline}               % bold (vertical) lines in tables
+%\usepackage{boldline}               % bold (vertical) lines in tables
 
 
 \usepackage{amsmath}                % math symbols
@@ -37,17 +37,19 @@
 \usepackage{graphbox}               % needed for aligning images in multicol environment
 \usepackage{scalerel}               % scale any objects
 \usepackage{anyfontsize}            % set any font size
-\usepackage[table]{xcolor}          % needed for colors
+\usepackage[dvipsnames]{xcolor}     % needed for colors
 
 
 \usepackage{tcolorbox}              % colored boxes
 \usepackage[outline]{contour}       % contour for text (used in custom underline command)
 \usepackage[normalem]{ulem}         % custom underline (used in custom underline command)
 
-
+\usepackage{circuitikz}
 \usepackage{tikz}                   % needed for TikZ drawings
 \usepackage{pgfplots}               % Draw nice plots
 
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}} %For cicles around numbers
 
 \usepackage{listings}               % for nicer code display
 % to use nodes inside listing see: https://texample.net/tikz/examples/tikz-listings/
@@ -66,7 +68,9 @@
 \usepackage[explicit]{titlesec}     % custom section titles
 
 
-\usepackage{datetime2}              % custom date format for versioning
+\usepackage{datetime2}              % custom date format for 
+\usepackage{array}                  % make multicol tables
+%versioning
 
 
 % ========================================== BASIC SETUP ==========================================

@@ -1,0 +1,228 @@
+\section{Thermische Kraftwerke/ Dampfkraftwerke}
+Gegen 90\% der weltweiten Bereitstellung
+elektrischer Energie erfolgt in «Thermischen Kraftwerken».\\
+Kraftwerksarten:
+\begin{itemize}
+    \item Thermische Kraftwerke auf fossiler Basis
+(Dampf-, Gasturbinen-, Gas- und Dampfturbinen-Kraftwerke (GUD), Blockheiz-, Diesel- Kraftwerke)
+    \item Kernkraftwerke
+    \item Geothermische Anlagen
+    \item Solarthermische Anlagen
+    \item Heizkraftwerke
+    \item Kehrichtverbrennung mit thermischem Kraftwerk
+\end{itemize}
+
+\subsection{Funktionsweise}
+\includegraphics[width=0.95\columnwidth, align=c]{images/Prinzip_Thermisch.png}\\
+\includegraphics[width=0.5\columnwidth, align=c]{images/Prinzip2_Thermisch.png}\\
+\begin{enumerate}
+    \item Brenn- und Treibstoffe, Geothermie, Solarthermie, atomare Bindungsenergie
+    \item Thermische Energie in Form von Gas oder Dampf
+    \item Gas- oder Dampfturbine
+    \item Generator
+    \item Transformator/Netz
+\end{enumerate}
+
+\subsection{Thermodynamik}
+\vspace{-0.25cm}
+
+    \includegraphics[width=0.98\linewidth, align=c]{images/Thermo.png}\\ 
+    \textbf{isotherme:} $T = const,\ W = m \cdot Ri \cdot T \cdot \mathrm{ln}\left(\frac{p2}{p1} \right)$\\
+    \textbf{isochore:} $V = const,\ Q = c_v \cdot m \cdot \Delta T$\\
+    \textbf{isobare:} $p = const,\ Q = c_p \cdot m \cdot \Delta T$\\
+    \textbf{isotrop:} Entropie bleibt konstant $ \frac{T1}{T2} = \left( \frac{p_1}{p_2}\right) ^{\frac{x-1}{x}}= \frac{T_4}{T_3}$\\
+    \textbf{adiabatisch:} Zustandsänderung ohne Wärmetausch mit der Umgebung\\
+    \textbf{ideales Gas:} $\frac{p\cdot v}{T} = const$\\
+    \textbf{Enthalpie:} Wärmeinhalt, $H=U+p\cdot V$, $U$: innere Energie\\
+    \textbf{Entropie:} Energie pro Temperatur $T$, Entropieänderung $\Delta S =\frac{Q}{T}$, $Q$: zugeführte Wärme
+\subsection{Kreisprozesse}
+\subsubsection{Carnot Prozess}
+Wärme (Dampferzeuger) -> Mechanische Arbeit (Dampfturbine)\\
+\begin{minipage}[ht]{0.49\columnwidth}
+    \includegraphics[width=0.98\linewidth, align=c]{images/carnot1.png}
+    
+\end{minipage}
+\begin{minipage}[ht]{0.49\columnwidth}
+    \textbf{Carnot-Prozess im T, s - Diagramm}\\
+    Nutzbare Arbeit: $w_nutz = q_{zu} - q_{ab}$\\Da die Entropie als $dq = T \cdot ds$ definiert ist, erscheint sowohl die dem Prozess zugeführte Wärme $q_{zu} = T_{max} ( s_3 - s_2 )$ als auch die abgeführte Wärme $q_{ab} = T_{min} (s_4 - s_1)$  als Fläche im T, s -Diagramm.\\
+    Der Wirkungsgrad des Carnot-Prozesses ergibt sich somit:
+\end{minipage}
+
+\textbf{Thermischer Wirkungsgrad}\\
+$\boxed{\eta_{\mathrm{th}}' 
+= \frac{P_m - P_u}{P_{zu}}
+= \frac{(h_3 - h_{4^*})\,\dot m_D - (h_{2^*} - h_1)\,\dot m_D}{(h_3 - h_{2^*})\,\dot m_D}}$
+
+$\boxed{\eta_{\mathrm{th}}'
+= 1 - \frac{P_{ab}}{P_{zu}}
+= 1 - \frac{(h_{4^*} - h_1)\,\dot m_D}{(h_3 - h_{2^*})\,\dot m_D}
+= 1 - \frac{h_{4^*} - h_1}{h_3 - h_{2^*}}}$
+
+\begin{tabular}{@{} l p{7.5cm} l @{}}
+  $[P_m]$ & abgegebene mechanische Leistung der Wärmekraftmaschine \dotfill & $\mathrm{kW}$    \\
+  $[P_{u}]$ & Leistung der (elektrisch angetriebenen) Speisewasserpumpe \dotfill & $\mathrm{kW}$    \\
+  $[P_{zu}]$ & Leistungszufuhr aus dem Kessel \dotfill & $\mathrm{kW}$    \\
+  $[P_{ab}]$ & abzuführende Wärmeleistung im Kondensator \dotfill & $\mathrm{kW}$    \\
+  $[\dot m_{D}]$ & konstanter Dampf-Massenstrom pro Zeiteinheit \dotfill & $\mathrm{kg/s}$  \\
+  $[h]$ & spezifische Enthalpie \dotfill & $\mathrm{kJ/kg}$ \\
+  $[Q]$ & Wärmemenge \dotfill & $\mathrm{J}$ \\
+\end{tabular}
+
+\subsubsection{Wirkungsgrad erhöhen}
+
+\begin{itemize}  
+    \item Zwischenüberhitzung
+    \item Speisewasservorwärmung
+    \item Erhöhung des Dampfdrucks und der Temperatur
+    \item Kombination mit Gasturbine (GuD-Prozess)
+\end{itemize}
+
+\subsection{Joule-Prozess für Gasturbinen}
+
+\begin{minipage}[ht]{0.49\columnwidth}
+    \includegraphics[width=0.98\linewidth, align=c]{images/carnot2.png}
+    
+\end{minipage}
+\begin{minipage}[ht]{0.49\columnwidth}
+    \textbf{Joule-Prozess im T, s - Diagramm}\\
+    \textbf{Ablauf:}\\
+    1 - 2 Verdichtung, $s$ const, $p$ steigt (isotrop)\\
+    2 - 3 Erwärmung, $s$ steigt, $T$ steigt, $p$ konstant (isobar)\\
+    3 - 4 Entspannung, $s$ konstant, $p$ sinkt (isotrop)\\
+    4 - 1 Abkühlung, $s$ sinkt, $T$ sinkt, $p$ konstant (isobar)\\
+\end{minipage}
+
+\subsection{Enthalpie}
+\begin{minipage}[ht]{0.49\columnwidth}
+    \includegraphics[width=0.95\columnwidth, align=c]{images/Wasserverlauf.png}
+    
+\end{minipage}
+\begin{minipage}[ht]{0.49\columnwidth}
+    $\boxed{dH= dQ + V\cdot dp}$ d.h. Enthalpie ändert mit Druck\\
+    Verdampfungswärme:
+    $\boxed{q_V=T_V\cdot \Delta S}$\\
+    \textbf{Arregatsänderungen:}\\
+    Fest - Flüssig: Schmelzen/ erstarren\\
+    Flüssig - Gas: Verdampfen/ kondensieren\\
+    Fest - Gas: Sublimieren/ Resublimieren\\
+    $0^\circ$C = 273K\\
+\end{minipage}
+
+\subsection{Mollier-Diagramm}
+\includegraphics[width=0.95\columnwidth, align=c]{images/hsDiagramm.png}\\
+Dampfturbine mit Zwischenüberhitzung\\
+\circled{1}: Startdruck: $500\, \mathrm{^\circ C}$ $50\, \mathrm{bar}$\\
+\circled{1} zu \circled{2}: Entspannung in Turbine\\
+\circled{2} zu \circled{3}: Temperaturzufuhr mit konstantem Druck (isobar); Dampferzeuger(Energieeintrag,Q)\\
+\circled{3} zu \circled{4}: Entspannung in Turbine\\
+$\boxed{x=\frac{m_D}{m_W + m_D}}$
+$\boxed{\frac{m_w}{m_d}= \frac{1}{x}-1}$
+$\boxed{\Delta h_{liquid}= V \cdot \Delta p}$
+($1  Bar = 10^5pa$)\\
+\boxed{P = \dot{m}_D \cdot \Delta h}
+$\boxed{P_{\text{mech}} = \dot{m}_k \cdot \eta_{\text{Th}} \cdot \eta_{\text{DE}} \cdot H
+}$
+$\boxed{\eta_{\mathrm{th}}
+= 1 - \frac{P_{ab}}{P_{zu}}
+= 1 - \frac{\Sigma h_{tief}}{{\Sigma h_{hoch}}}} $
+$\boxed{\eta_\mathrm{c} = 1-\frac{T_U}{T_O}}$ $0^\circ C= 273 K$ \\
+
+\textcolor{red}{Senkrechte $[\Delta h]$ nicht beachten bei der Berechnung von Wirkungsgrad des Kreisprozesses.}
+
+
+\begin{tabular}{@{} l p{7.5cm} l @{}}
+  $[x]$ & Wasserdampfgehalt \dotfill &    \\
+  $[m_D]$ & Dampfmassegehalt \dotfill & $\mathrm{kg/m^3}$    \\
+  $[m_W]$ & Wassermassegehalt \dotfill & $\mathrm{kg/m^3}$    \\
+  $[\Delta h]$ & Entropie zweier Punkte senkrecht verbunden \dotfill & $\mathrm{kJ/\ kg}$   \\
+  $[V]$ & Volumen $0.001\,\mathrm{\frac{m^3}{kg}}$\dotfill & $\mathrm{m^3}$ \\
+  $[\Delta p]$ & Druckunterschied \dotfill & Pa \\
+  $[\eta_{\mathrm{th}}]$ & Thermischer Wirkungsgrad \dotfill &  \\
+  $[\eta_{\mathrm{c}}]$ & Carnot-Faktor \dotfill &  \\
+  $[T_o]$ & Höchste Temperatur Prozess \dotfill & $\mathrm{K}$ \\
+  $[T_u]$ & Tiefste Temperatur über x=1 Grenze \dotfill & $\mathrm{K}$ \\
+  $[P_{\text{mech}}]$ & Mechanisch abgegebene Leistung \dotfill & $\mathrm{W}$ \\
+  $[\dot{m}_k]$ & Massenstrom des eingesetzten Brennstoffs \dotfill & $\mathrm{kg/s}$ \\
+  $[\eta_{\text{th}}]$ & Thermischer Wirkungsgrad \dotfill &  \\
+  $[\eta_{\text{DE}}]$ & Wirkungsgrad der Dampferzeugung bzw. Energieumwandlung \dotfill &  \\
+  $[H]$ & Heizwert des Brennstoffs \dotfill & $\mathrm{J/kg}$ \\
+\end{tabular}
+
+
+\subsection{Anleitung Mollier Diagramm (s - h)}
+\subsubsection{Clausius-Rankine-Prozess}
+Sattdampfprozess (Dampfkreislauf)\\
+1 - 2 Druckerhöhung mit Speiseerhöhung (von 1 Bar bis Zieldruck, senkrecht links unten)\\
+\textcolor{ForestGreen}{2 - 3 Dampferzeuger, Energiezugabe (Druck bleibt konstant)}\\
+\textcolor{purple}{3 - 4 Dampfturbine, Energieumwandlung zu mechanisch (Druckabnahme, s bleibt konstant (senkrechte Linie)}\\
+\textcolor{red}{4 - 1 Kondensator, zurück zum Start, Verlustenergie (Druck konstant)}\\
+
+\includegraphics[width=0.95\columnwidth, align=c]{images/Sattdampf.pdf}\\
+\includegraphics[width=0.95\linewidth]{images/DampfkraftMitZwischenueberhitzung.png}
+Wirkungsgrad:\\
+\begin{minipage}[c]{0.4\columnwidth}
+    $\boxed{\eta_{\mathrm{th}} = 1-\frac{h_{\mathrm{4b}}-h_{\mathrm{1}}}{(h_{\mathrm{3a}}-h_{\mathrm{2}})+(h_{\mathrm{3b}}-h_{\mathrm{4a}})}}$
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.6\columnwidth}
+\includegraphics[width=1\linewidth]{images/Zwischenueberhitzung.png}
+\end{minipage}
+\subsection{Varianten}
+\begin{itemize}
+    \item Dampfkraftwerk mit Zwischenüberhitzung
+    \item Dampfkraftwerke mit Abwärmenutzung
+\end{itemize}
+
+\subsection{Komponenten}
+Komponenten fossil befeuerten Dampfkraftwerke
+\begin{itemize}
+    \item Kessel und Dampferzeuger
+    \item Rauchgasreinigung
+    \item Feuerungen und Brenner
+    \item Dampferzeuger mit Wirbelschichtfeuerung
+    \item Dampfturbinen
+    \item Kühlsysteme für Dampfkraftwerke
+\end{itemize}
+\textbf{Kühlsysteme:}\\
+\begin{itemize}
+    \item Frischwasserkühlung
+    \item Ablaufkühlung
+    \item Nasse Rückkühlung
+    \item Trockene Rückkühlung
+    \begin{itemize}
+        \item direktes System
+        \item indirekt mit Mischkondensator
+        \item indirekt mit Oberflächenkondensator
+    \end{itemize}
+\end{itemize}
+\vspace{0.2cm}
+\begin{minipage}[ht]{0.49\columnwidth}
+    \textbf{Kohlestaubbrenner:}\\
+\includegraphics[width=0.95\columnwidth, align=c]{images/Kohlestaub.png}\\
+\end{minipage}
+\begin{minipage}[ht]{0.49\columnwidth}
+    \textbf{Gasreinigung:}\\
+\includegraphics[width=0.95\columnwidth, align=c]{images/GAsreinigung.png}\\
+\end{minipage}
+
+\includegraphics[width=0.95\columnwidth, align=c]{images/Entschwefelung.png}\\
+\textbf{Turbine:}\\
+\begin{minipage}[ht]{0.49\columnwidth}
+    \includegraphics[width=0.95\columnwidth, align=c]{images/dampfturbine.png}
+\end{minipage}
+\begin{minipage}[ht]{0.49\columnwidth}
+    \begin{tabular}{ll}
+        a & Gehäuse \\ 
+        b & Läufer \\ 
+        c & Schaufeln \\ 
+        d & Einströmstützen \\ 
+        e & Ausstromstutzen \\ 
+        f & Zylinderschnitt \\
+        g & Leitgitter\\
+        h & Lauftgitter\\
+        m & Massestrom medium\\
+        $F_\tau$ & Tangetialkraft Laufrad \\ 
+    \end{tabular}
+\end{minipage}
+
+\newcolumn

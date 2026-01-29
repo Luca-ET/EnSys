@@ -1,31 +1,152 @@
-\section{}
+\newcolumn
+\section{Störungen in Stromnetzen}
 
 
-\subsection{}
+\subsection{Normaler Betriebszustand}
+
+\begin{itemize}
+  \item Spannungen und Ströme im zulässigen Bereich
+  \item Intakter Isolationszustand
+  \item Intakte Betriebsmittel
+  \item Gewünschter Schaltzustand
+\end{itemize}
 
 
-\subsection{}
+
+\subsection{Definitionen: Fehler, Störung, Schaden}
+
+\begin{itemize}
+  \item \textbf{Fehler:} Ungewollte Änderung des normalen Betriebszustandes
+  \item \textbf{Störung:} Folge eines Fehlers, umfasst gesamten Ablauf vom Fehlereintritt bis zur Beseitigung; kann Versorgungsunterbrechung mit sich ziehen
+  \item \textbf{Schaden:} Bleibende, nachteilige Veränderung an einem Betriebsmittel
+\end{itemize}
 
 
-\subsection{}
+
+\subsection{Fehlerarten}
+
+\includegraphics[width=0.8\columnwidth, align=c]{images/Fehlerarten_1.jpg}
 
 
-\subsection{}
+
+\subsubsection{Niederohmige Fehler}
+
+„Satter” Kurzschluss, sehr gut leitende Verbindung zwischen Phasen und/oder Erde, \textbf{hoher Fehlerstrom}
 
 
-\subsection{}
+
+\subsubsection{Hochohmiger Fehler}
+
+Schlecht leitende Verbindung zwischen Phasen und/oder Erde, \textbf{geringer Fehlerstrom}
 
 
-\subsection{}
+
+\subsubsection{Symmetrischer Fehler}
+
+\begin{itemize}
+  \item Gleicher Fehler in allen drei Phasen
+  \item Dreiphasiger (Erd-)Kurzschluss
+  \item Dreiphasige Unterbrechung
+\end{itemize}
 
 
-\subsection{}
+
+\subsubsection{Unsymmetrische Fehler}
+
+\begin{itemize}
+  \item Ein- und zweiphasige (Erd-)Kurzschlüsse
+  \item Ein- und zweiphasige Unterbrechungen
+\end{itemize}
 
 
-\subsection{}
+
+\subsection{Sternpunktbehandlung}
+
+\textbf{Wichtigkeit:} Der Schutztechnik wird die Art der Sternpunktbehandlung vorgegeben. Alle Schutzsysteme sind dahingehend auszuwählen und entsprechend einzustellen.
+
+\vspace{0.15cm}
+
+\includegraphics[width=0.8\columnwidth, align=c]{images/Sternpunktbehandlung_1.jpg}
+
+\vspace{0.15cm}
+
+\begin{itemize}
+  \item $Z_E = 0$: „starre” Erdung
+  \item $Z_E$ klein: niederohmige Erdung
+  \item $Z_E$ gross: hochohmige Erdung
+\end{itemize}
+
+\subsubsection{Sternpunktverschiebung (einpoliger Unterbruch)}
+
+\vspace{0.15cm}
+
+\begin{minipage}[c]{0.78\columnwidth}
+    %\begin{center}
+        \includegraphics[width=0.98\columnwidth, align=c]{images/Sternpunktverschiebung_1.jpg}
+    %\end{center}    
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.2\columnwidth}
+    %\begin{center}
+        \includegraphics[width=0.98\columnwidth, align=c]{images/Sternpunktverschiebung_2.jpg}
+    %\end{center} 
+\end{minipage}
 
 
-\subsection{}
+\vspace{0.15cm}
 
+\textbf{Herleitung:}
+\begin{enumerate}
+  \item Nach Unterbrechung von L1 fliesst in L2 und L3 der Strom $I_{23}$. \\
+        Er verursacht einen entsprechenden Spannungsabfall an der Impedanz $\underline{Z}$.
+  \item Aufstellen der Gleichung für Masche M1 und Berechnung $\Delta \underline{U}$.
+  \item Aufstellen der Gleichung für Masche M2 und Berechnung $\Delta \underline{U}$.
+  \item Addieren Sie die Ergebnisse aus 2. und 3. und berechnen Sie daraus $\Delta \underline{U}$.
+\end{enumerate}
 
-\subsection{}
+\vspace{0.15cm}
+
+$
+\Delta \underline{U} = \underline{U_2} - \underline{I_{23}} \underline{Z} \\
+\Delta \underline{U} = \underline{U_3} + \underline{I_{23}} \underline{Z} \\
+2 \cdot \Delta \underline{U} = \underline{U_2} + \underline{U_3} \\
+\Delta \underline{U} = \frac{\underline{U_2} + \underline{U_3}}{2}
+$
+
+\vspace{0.15cm}
+
+\textbf{Wichtig:}
+
+\vspace{0.15cm}
+
+$\boxed{\Delta \underline{U} = \frac{\underline{U_2} + \underline{U_3}}{2}}$
+
+\vspace{0.15cm}
+
+$\Delta \underline{U}$ ist unabhängig von $\underline{Z}$, da wir ein symmetrisches System haben ($\underline{Z}_1 = \underline{Z}_2 = \underline{Z}_3$).
+
+\subsection{\texorpdfstring{Sternpunktspannung 2 (Störimpedanz $\Delta$ Z beigefügt)}{Sternpunktspannung 2 (Störimpedanz Delta Z beigefügt)}}
+
+\begin{minipage}[c]{0.48\columnwidth}
+    \includegraphics[width=\columnwidth, align=c]{images/u04.png}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.4\columnwidth}
+    $
+    \boxed{
+        \Delta \underline{U} = \frac{
+        \underline{U_1} \left(1 + \frac{Z}{\Delta Z} \right) + \underline{U_2} + \underline{U_3}
+        }{
+        3 + \frac{Z}{\Delta Z}
+        }
+    }
+    $
+\end{minipage}
+
+\section{Leittechnik}
+\subsection{Ruhestromauslösung}
+Funktion: Die Ruhestromauslösung (auch Arbeitsstromauslösung) ist ein Schutzprinzip, bei dem ein Auslösekriterium (z.B. ein Stromfluss in einem überwachten Kreis) beim Erreichen eines Schwellenwerts die Auslösung eines Schalters bewirkt. Im Normalzustand fliesst kein Strom im Auslösekreis, bei einem Fehler jedoch schon, wodurch der Schutz ausgelöst wird. \\
+Beispiel aus der Kraftwerkstechnik: \\
+Überstromauslösung eines Generatorschutzrelais: Wenn der Strom im Generator einen bestimmten Grenzwert überschreitet (z.B. bei einem Kurzschluss), wird ein Signal an den Leistungsschalter gesendet, um den Generator vom Netz zu trennen.\\
+Vorteil: Einfache und zuverlässige Detektion von Überströmen oder anderen Fehlerzuständen.  Direkte Auslösung bei Erreichen des Grenzwertes. \\
+Nachteile: Benötigt eine externe Energiequelle für den Auslösemechanismus. Bei Ausfall dieser Energiequelle (z.B. Hilfsspannung) ist der Schutz unwirksam. Dies im Gegensatz zur Ruhespannungsauslösung. 

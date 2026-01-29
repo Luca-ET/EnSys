@@ -136,20 +136,47 @@ $
 \boxed{\underline{\gamma} = \sqrt{(R' + j\omega L')(G' + j \omega C')} = \alpha + j\beta}
 $
 
+\textbf{Leerlauf:} \quad $I_2 = 0 \Rightarrow U_2 = \frac{U_1}{\cosh(\gamma l)}$
 
-\subsubsection{Modell Vereinfacht}
+\textbf{Kurzschluss:} \quad $U_2 = 0 \Rightarrow I_2 = \frac{I_1}{\cosh(\gamma l)}$
 
-Wenn folgende 3 Punkte zutreffen, kann diese Vereinfachung angewendet werden:\\
+
+
+
+
+\subsection{PI-Ersatzschaltung (Modell Vereinfacht)}
+Wenn $| \underline{\gamma } \cdot l | \ll 1$, kann die Vereinfachung $\cosh{\underline{\gamma l}} \approx 1$ und $\sinh{\underline{\gamma}l} = \underline{\gamma}l$:\\
+Vereinfachung für „kurze“ Leitungen mit konzentrierten Elementen R, G, L, C
 \begin{itemize}
-    \item $| \underline{\gamma } \cdot l | \ll 1$
-    \item $\text{sinh}(\underline{\gamma } \cdot l) \approx \underline{\gamma } \cdot l$
-    \item $\text{cosh}(\underline{\gamma } \cdot l) \approx 1$
+    \item Querelemente bestehen aus Leitwert und Kapazität
+    \item Längselemente bestehen aus Widerstand und Induktivität
+    \item 50-Hz-Freileitungen bis ca. 250 km
+    \item 50-Hz-Kabel bis ca. 50 km
 \end{itemize}
+\vspace{0.15cm}
+\includegraphics[width=0.98\columnwidth, align=c]{images/Leitungsmodell_gültigkeit.png}
+\vspace{0.15cm}
+\begin{center}
+    \begin{minipage}[t]{0.58\columnwidth}
+       \centering
+            $
+            \boxed{
+                \underline{Z} = (R' + j \cdot \omega \cdot L') \cdot l
+            }
+            \quad
+            \boxed{
+                \dfrac{\underline{Y}}{2} = \dfrac{(G' + j \cdot \omega \cdot C') \cdot l}{2}
+            }
+            $
+    
+    \end{minipage}\\ 
+\end{center}
 
-\includegraphics[width=0.98\columnwidth, align=c]{images/Leitungsgleichungen_2.png}
+
+
 
 \vspace{0.15cm}
-
+\includegraphics[width=0.98\columnwidth, align=c]{images/Leitungsgleichungen_2.png}
 $\boxed{
 \begin{pmatrix}
     \underline{U}_1 \\
@@ -164,35 +191,34 @@ $\boxed{
     U_2 \\
     \underline{I}_2
 \end{pmatrix}
-}
-$
-
-\vspace{0.15cm}
-
+}$\\
 $
 \boxed{
-    \underline{Z} = (R' + jX') \cdot l
+|U_2| = |U_1| \cdot 
+\left| 
+\frac{
+\displaystyle \frac{1}{\left( \frac{G'}{2} + j \omega \frac{C'}{2} \right) \cdot l}
+}{
+(R' + j \omega L') \cdot l + 
+\displaystyle \frac{1}{\left( \frac{G'}{2} + j \omega \frac{C'}{2} \right) \cdot l}
 }
-\quad
-\boxed{
-    \dfrac{\underline{Y}}{2} = \dfrac{(G' + jB') \cdot l}{2}
-}
-$
+\right|
+}$
 
+\subsubsection{Übung Kraftwerk mit Doppelleitung an Netz}
 
-\subsection{Vereinfachung für "kurze" Leitungen}
-
-Vereinfachung für „kurze“ Leitungen mit konzentrierten Elementen R, G, L, C
-\begin{itemize}
-    \item 50-Hz-Freileitungen bis ca. 250 km
-    \item 50-Hz-Kabel bis ca. 50 km
-\end{itemize}
-
-\vspace{0.15cm}
-
-\includegraphics[width=0.98\columnwidth, align=c]{images/Leitungsmodell_gültigkeit.png}
-
-\vspace{0.15cm}
+\begin{minipage}[t]{0.6\columnwidth}
+    \includegraphics[width=\columnwidth, align=c]{images/u03.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.58\columnwidth}
+    $
+        \boxed{
+            \underline{U_1} = \underline{U_2} + j X'_L \cdot 
+            \frac{P_{1,ph} - j Q_{1,ph}}{\underline{U_1}^*}
+        }
+    $
+\end{minipage}
 
 
 

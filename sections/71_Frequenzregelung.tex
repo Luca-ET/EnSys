@@ -20,30 +20,327 @@ $
     $[P_{\text{Last}}]$   & Elektrische Lastleistung (Netzeinspeisung) \dotfill & $\text{W}$ \\
 \end{tabular}
 
+\vspace{0.15cm}
+
+\textbf{Beobachtungen:}
+\begin{itemize}
+    \item Wenn dauerhaft \( P_\mathrm{Gen} > P_\mathrm{Last} \), wird \(\omega\) immer grösser.
+    \item Wenn dauerhaft \( P_\mathrm{Gen} < P_\mathrm{Last} \), wird \(\omega\) immer kleiner.
+    \item Je größer \( H \), desto langsamer ändert sich \(\omega\).
+\end{itemize}
+
+\subsection{Modell des elektrischen Netzes}
+
+\begin{itemize}
+    \item mehrere gekoppelte Synchrongeneratoren, \( i = 1, \ldots, N \)
+\end{itemize}
+
+\vspace{0.15cm}
+
+$
+\boxed{
+\frac{d\omega_i}{dt} = \frac{(P_{\text{Gen,}i} - P_{\text{Last,}i})}{2 \cdot H_i} 
+}
+$
+
+\vspace{0.15cm}
+
+\begin{itemize}
+    \item \( P_{\text{Gen},i} \) folgt einem Fahrplan
+    \item \( P_{\text{Last},i} \) hängt von
+    \begin{itemize}
+        \item den Lasten am Knoten \( i \)
+        \item der elektrischen Kopplung mit anderen Knoten
+        \item der Lastbilanz aller anderen Knoten im Netz
+    \end{itemize}
+\end{itemize}
 
 
-\subsection{}
+
+\subsubsection{Transiente Stabilität und Synchronizität}
+Frequenz an jedem Knoten soll gleich sein.\\
+$
+\boxed{\frac{d\omega_i}{dt} = 0} 
+\quad 
+\forall \ i = 1, \ldots, N
+\quad
+\boxed{\omega_1 = \omega_2 = \ldots = \omega}
+\quad
+\quad
+\forall \ \text{heisst für alle}
+$
+
+\vspace{0.15cm}
+
+Wird überwiegend durch \textcolor{blue}{passive Stabilität des Netzes} sichergestellt. Zusätzliche Massnahmen werden in Zukunft wichtiger werden.
 
 
-\subsection{}
+
+\subsubsection{Frequenzstabilität:}
+
+$
+\boxed{
+\Delta f = \frac{\Delta P}{k}
+}
+$
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{} l p{7cm} l @{}}
+    $[\Delta f]$              & Frequenzabweichung \dotfill                            & $\text{Hz}$ \\
+    $[\Delta P]$       & Änderung der Leistung (Differenz Erzeugung/Verbrauch) \dotfill & $\text{W}$ \\
+    $[k]$              & Proportionalitätsfaktor \dotfill & $\frac{\text{W}}{\text{Hz}}$ \\
+\end{tabular}
+
+Wird durch die \textcolor{red}{Grundenergiebeschaffung} und die \textcolor{red}{klassischen Systemdienstleistungen} (Netzbetreiber) sichergestellt.
 
 
-\subsection{}
+\subsection{Abweichungen vom Lastfahrplan}
 
 
-\subsection{}
+\subsubsection{Problem}
+
+\begin{itemize}
+    \item Für Nachfragen und volatile Energiequellen sind nur unsichere Vorhersagen bekannt
+    \item Durch diskretisierte Fahrplanprofile (z.\,B. in Schritten von Stunden oder 15 Minuten) können selbst bei genauer Vorhersage nicht alle Lastprofile erfüllt werden
+    \item Störungen im Netz, z.\,B. Verlust eines Generators, einer Last oder einer Leitung ändern die Lastflussbilanz und müssen kompensiert werden
+\end{itemize}
 
 
-\subsection{}
 
 
-\subsection{}
+\subsubsection{Lösung}
+
+\begin{itemize}
+    \item Automatische und klar geregelte Verfahren, um Fahrplanabweichungen zu kompensieren.
+    \item Faire Aufgabenteilung über alle Netzregionen und nach Verursacherprinzip.
+    \item Hierarchische Struktur mit mehreren Zeitebenen.
+\end{itemize}
 
 
-\subsection{}
+\subsection{Transientenregelung und Schwingungsdämpfung}
+
+\begin{itemize}
+    \item Zeitraum: wenige Sekunden
+    \item Störungen (z.B. Kurzschlüsse) lösen netzweite Oszillation und starke lokale Frequenzschwankungen im Netz aus
+    \item Elektrische Kopplung zwischen den Generatoren und Schwungmassen \( H_i \) wirken der \textcolor{blue}{Störung passiv entgegen}
+    \item Zusätzliche \textcolor{blue}{aktive Schwingungsdämpfung} durch Modulation ausgewählter \( P_{\text{Last},i} \) (\textit{Power System Stabilizer})
+    \item Alle Generatoren konvergieren zur \textcolor{red}{Systemfrequenz \(\omega\)} und zur \textcolor{red}{Gesamtsystemdynamik}
+\end{itemize}
+
+$$
+\frac{d\omega_i}{dt} = \frac{1}{2H_i} (P_{\text{Gen},i} - P_{\text{Last},i})
+\quad \Rightarrow \quad
+\frac{d\omega}{dt} = \frac{1}{2H} (P_{\text{Gen}} - P_{\text{Last}})
+$$
+
+\subsection{(n-1)-Sicherheitsprinzip}
+Das (n-1)-Sicherheitsprinzip besagt, dass der Ausfall eines beliebigen Betriebsmittels (z.B. Leitung, Transformator, Kraftwerksblock) in einem elektrischen Netz zu keiner Überlastung der verbleibenden Betriebsmittel und zu keinem Netzzusammenbruch führen darf. Das Netz muss auch nach dem Ausfall einer Komponente noch stabil und sicher betrieben werden können.
+
+\subsection{Primärregelung}
+Frequenz soll stabil gehalten werden.\\
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{center}
+        \includegraphics[width=0.75\textwidth, align=c]{images/Primärregelung_1.jpg}
+    \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{center}
+        \includegraphics[width=0.98\textwidth, align=c]{images/Primärregelung_2.jpg}
+    \end{center}
+\end{minipage}
+
+\vspace{0.15cm}
+
+\begin{itemize}
+    \item Typische Einsatzdauer: Sekunden bis wenige Minuten
+    \item Regelcharakteristik wie ein proportional (P-Regler)
+    \item Die Leistungsanpassung passiert automatisch
+    \item Durch Fahrplanabweichung gibt es einen \textcolor{red}{dauerhaften Bilanzfehler \( P_{\text{Gen}} - P_{\text{Last}} \ne 0 \)}
+    \item Die Frequenz beginnt vom Nominalwert \(\omega_0 = 50\,\mathrm{Hz}\) abzuweichen
+    \item \textcolor{blue}{Alle Generatoren im Netz} ändern ihre erzeugte Leistung proportional zur Frequenzabweichung, um die Lastbilanz wiederherzustellen
+    \item K-Faktor wird vom Netzbetreiber für jedes Kraftwerk festgelegt
+\end{itemize}
+
+\[
+\frac{d\omega}{dt} = \frac{1}{2H} \bigl(P_{\text{Gen}} - P_{\text{Last}} - K(\omega - \omega_0)\bigr)
+\]
+
+\subsubsection{Neue Systemfrequenz}
 
 
-\subsection{}
+$\boxed{
+\omega = \omega_0 + \frac{1}{K} (P_{\text{Gen}} - P_{\text{Last}})}
+$
+
+\newcolumn
+
+\subsection{Sekundärregelung}
+Frequenz wieder auf auf $50\, \mathrm{Hz}$ bringen.\\
+\begin{itemize}
+    \item Typische Einsatzdauer: bis 15 Minuten
+    \item Regelcharakteristik wie ein PI-Regler
+    \item Die Leistungsanpassung passiert zentral automatisch 
+    \item Primärregelung führt zu Stabilität und ausgeglichener Gesamtlastbilanz, aber zu \textcolor{red}{permanenter Frequenzabweichung}
+    \item Primärregelung muss entlastet werden, um im Störfall wieder zur Verfügung zu stehen
+    \item Außerdem weicht die \textcolor{red}{Lastbilanz der betroffenen Regelzone} vom Fahrplan ab (führt zu Strafzahlungen)
+    \item \textcolor{blue}{Die Generatoren einer Regelzone} ändern ihre erzeugte Leistung, bis die Lastbilanz der Regelzone wiederhergestellt ist
+\end{itemize}
 
 
-\subsection{}
+\subsubsection{Bilanzfehlers \( e \) der Regelzone}
+
+z.B. der Schweiz (\textit{Area Control Error})
+
+\vspace{0.15cm}
+
+\begin{minipage}[c]{0.48\columnwidth}
+    $\boxed{
+        e = \sum_{i \in \text{Grenzleitungen}} \left( P_{\text{Leitung},i}^{\ \text{ist}} - P_{\text{Leitung},i}^{\ \text{soll}} \right)}
+    $
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{center}
+        \includegraphics[width=0.5\textwidth, align=c]{images/Bilanzfehler_1.jpg}
+    \end{center}
+\end{minipage}
+
+\vspace{0.15cm}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{} l p{6cm} l @{}}
+    $[e]$                          & Bilanzfehler \dotfill                       & $\text{MW}$ \\
+    $[P_{\text{Leitung}, i}^{\ \text{ist}}]$   & Tatsächliche Leistung auf Leitung $i$ \dotfill  & $\text{MW}$ \\
+    $[P_{\text{Leitung}, i}^{\ \text{soll}}]$  & Soll-Leistung auf Leitung $i$ \dotfill         & $\text{MW}$ \\
+\end{tabular}
+
+\vspace{0.15cm}
+
+\begin{itemize}
+    \item Alle Generatoren der Regelzone erhalten das zentrale Stellsignal \( e \)
+\end{itemize}
+
+\vspace{0.15cm}
+
+$\boxed{
+\frac{d\omega_i}{dt} = \frac{1}{2H} \Bigl( P_{\text{Gen},i} - P_{\text{Last},i} - K_1 \cdot e - K_2 \cdot \int e \Bigr)}
+$
+
+\vspace{0.15cm}
+
+\begin{itemize}
+    \item Damit wird die \textcolor{blue}{Lastbilanz der Regelzone} wieder ausgeglichen, bis \( e = 0 \) erreicht ist
+    \item Gleichzeitig wird die \textcolor{blue}{Frequenzabweichung} kompensiert, da insgesamt wieder \( P_{\text{Gen}} = P_{\text{Last}} \) gilt.
+\end{itemize}
+
+
+\subsection{Tertiärregelung}
+Regelreserven wieder frei machen.\\
+\begin{itemize}
+    \item Typische Einsatzdauer: wenige Minuten bis mehrere Stunden
+    \item Die Leistungsanpassung passiert oft manuell
+    \item Sekundärregelung führt zu Frequenzkorrektur und ausgeglichener Lastbilanz der Regelzone
+    \item \textcolor{red}{Sekundärregelung muss entlastet werden}, um im Störfall wieder zur Verfügung zu stehen
+    \item Dazu werden durch den Betreiber der Regelzone \textcolor{blue}{manuell Reserveleistung aktiviert oder deaktiviert}, um \( P_{\text{Gen}} \) in der Regelzone zu korrigieren
+    \item Die Sekundärregelung wird dabei automatisch zurückgefahren
+\end{itemize}
+
+
+\subsection{\texorpdfstring{Regelkonzept $\omega \neq 50\,\mathrm{Hz}$ – was passiert?}
+                           {Regelkonzept omega ≠ 50 Hz – was passiert?}}
+
+\begin{itemize}
+    \item Erste Sekunden: alle reagieren
+    \item Erste Minuten: ausgewählte «Teamkollegen» übernehmen
+    \item Nach einigen Minuten: «Ersatzfahrer» steigt auf
+\end{itemize}
+
+\subsection{Europäisches Netzmodell - Kraftwerksverlust}
+
+\subsubsection{Transienten und Primärregelung}
+
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{itemize}
+    \item Durch Verlust wird die Lastbilanz negativ, die Frequenz nimmt ab.
+    \item Transiente Stabilität ist gewährleistet, das Netz bleibt synchron.
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{itemize}
+    \item Die Primärregelung erhöht \( P_\mathrm{Gen} \) bis Lastbilanz ausgeglichen ist.
+    \item Frequenz ist stabil, aber mit permanenter Abweichung.
+\end{itemize}
+\end{minipage}
+
+\vspace{0.15cm}
+
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{center}
+        \includegraphics[width=0.98\textwidth, align=c]{images/Kraftwerksverlust_1.jpg}
+    \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{center}
+        \includegraphics[width=0.6\textwidth, align=c]{images/Kraftwerksverlust_2.jpg}
+    \end{center}
+\end{minipage}
+
+
+
+\subsubsection{Sekundärregelung}
+
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{itemize}
+    \item Durch Integratoreffekt erfolgt Frequenzkorrektur.
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{itemize}
+    \item $P_{Gen}$ der Regelzone wird erhöht bis Lastbilanz ausgeglichen ist.
+\end{itemize}
+\end{minipage}
+
+\vspace{0.15cm}
+
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{center}
+        \includegraphics[width=0.98\textwidth, align=c]{images/Kraftwerksverlust_3.jpg}
+    \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth, align=c]{images/Kraftwerksverlust_4.jpg}
+    \end{center}
+\end{minipage}
+
+
+\subsubsection{Tertiärregelung}
+
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{itemize}
+    \item Sekundärregelleistung wird schrittweise abgelöst.
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.48\columnwidth}
+    
+\end{minipage}
+
+\vspace{0.15cm}
+
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{center}
+        \includegraphics[width=0.98\textwidth, align=c]{images/Kraftwerksverlust_5.jpg}
+    \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth, align=c]{images/Kraftwerksverlust_6.jpg}
+    \end{center}
+\end{minipage}

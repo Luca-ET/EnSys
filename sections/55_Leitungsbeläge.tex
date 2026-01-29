@@ -5,11 +5,19 @@
 
 \subsubsection{Ersatzschaltbild}
 
-\includegraphics[width=0.55\columnwidth, align=c]{images/Ersatzschaltbild.png}
+\includegraphics[width=0.7\columnwidth, align=c]{images/Ersatzschaltbild.png}
+\begin{minipage}[c]{0.3\columnwidth}
+    \begin{itemize}
+        \item Widerstandsbelag (r)
+        \item Induktivitätsbelag (l)
+        \item Ableitbelag (g)
+        \item Kapazitätsbelag (c)
+    \end{itemize}
+\end{minipage}
 
 
 \subsection{Widerstandsbelag}
-
+\newcolumn
 \subsubsection{Ursache}
 \begin{itemize}
     \item Ohmscher Widerstand des Leiterseils
@@ -121,7 +129,7 @@ Bei \textbf{Bündelleitern} wird der Skin-Effekt durch die Aufspaltung des Quers
 
 \subsubsection{Formeln}
 
-\includegraphics[width=0.8\columnwidth, align=c]{images/Induktivitätsbelag_2.png}
+\includegraphics[width=0.7\columnwidth, align=c]{images/Induktivitätsbelag_2.png}
 
 $
 \begin{tabular}{rcl}
@@ -157,27 +165,28 @@ $
     $[r]$      & Leiterradius \dotfill & $\text{m}$ \\
     $[d]$      & Mittlerer Leiterabstand \dotfill & $\text{m}$ \\
     $[d_{ij}]$ & Abstand zwischen Phase $i$ und $j$ \dotfill & $\text{m}$ \\
-    $[\mu_0]$  & Magnetische Feldkonstante  \dotfill & $\frac{\text{H}}{\text{m}}$ \\
+    $[\mu_0]$  & Magnetische Feldkonstante $4\pi\cdot10^{-7}$  \dotfill & $\frac{\text{H}}{\text{m}}$ \\
 \end{tabular}
 
 \vspace{0.15cm}
 
+\subsubsection{Einfluss Leiterseilabstand auf Längsinduktivität}
+\begin{itemize}
+    \item Grösserer Abstand erhöht die Induktivität, da der magnetische Kopplungseffekt abnimmt.
+    \item Kleinere Abstände verringern die Längsinduktivität wegen stärkerer magnetischer Verkettung zwischen Phasenleitern.
+\end{itemize}
+
 Der Abstand zwischen den Phasen (Leitern) wird jeweils ab dem Mittelpunkt des Leiters gemessen.
 
-
 \subsection{Kapazitätsbelag}
-
-Die elektrische Feldstärke durch Leiter $L_1$ sowie der Potentialunterschied zwischen Punkten außerhalb von $L_1$ erzeugen den Kapazitätsbelag. Durch Überlagerung der Einzelspannungen ergibt sich (unter gleichen Annahmen wie für $L'$):
-
-\includegraphics[width=0.35\columnwidth, align=c]{images/Kapazitätsbelag_1.png}
-
-\vspace{0.15cm}
-
-$
-\boxed{C' = \frac{2 \pi k}{\ln\left(\frac{d}{r}\right)}}
-$
-
-\vspace{0.15cm}
+Verursacht durch Kapazitäten gegenüber anderen Aussenleitern sowie der Umwelt (Mast/Boden).\\
+\begin{minipage}[c]{0.48\columnwidth}
+    \includegraphics[width=0.35\columnwidth, align=c]{images/Kapazitätsbelag_1.png}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.48\columnwidth}
+    $ \boxed{C' = \frac{2 \pi k}{\ln\left(\frac{d}{r}\right)}}$
+\end{minipage}
 
 \renewcommand{\arraystretch}{1.2}
 \begin{tabular}{@{} l p{8cm} l @{}}

@@ -1,5 +1,5 @@
 \newcolumn
-\section{Lastflussproblem}
+\section{Lastflussproblem (P-Q Problem)}
 
 
 \subsection{Problemformulierung}
@@ -10,6 +10,13 @@
 
 \includegraphics[width=0.98\columnwidth, align=c]{images/Problemstellung_2.png}
 
+\subsubsection{Iterationsformel}
+
+Spannung $\underline{U}_2$ kann mittels Iteration approximiert werden.
+
+\includegraphics[width=0.5\linewidth]{PQIteration.png}
+
+
 
 \subsection{Analyse der Spannung-Leistung Verhältnisses}
 
@@ -18,8 +25,6 @@ $
 P_{\text{last}} = -U_1 \cdot U_2 \cdot \frac{1}{X_L} \cdot \sin{\delta}
 }
 $
-
-\vspace{0.15cm}
 
 $
 \boxed{
@@ -62,18 +67,22 @@ $
 $
 
 \vspace{0.15cm}
-
-\begin{itemize}
-  \item 2 Lösungen für $U_2$
-  \item Stabile Lösung bei hohen Spannungen
-  \item Instabile Lösung bei niedrigen Spannungen
-  \item Die PV-Kurve wird auch „Nasenkurve” genannt
-\end{itemize}
-
+\begin{minipage}[c]{0.5\columnwidth}
+    \begin{itemize}
+      \item 2 Lösungen für $U_2$
+      \item Stabile Lösung bei hohen Spannungen
+  \end{itemize}
+\end{minipage}
+\begin{minipage}[c]{0.5\columnwidth}
+    \begin{itemize}
+        \item Instabile Lösung bei niedrigen Spannungen
+        \item Die PV-Kurve wird auch „Nasenkurve” genannt
+    \end{itemize}
+\end{minipage}
 
 \subsubsection{PV-Kurve, Nasenkurve}
 
-\includegraphics[width=0.98\columnwidth, align=c]{images/Nasenkurve.png}
+\includegraphics[width=0.75\columnwidth, align=c]{images/Nasenkurve.png}
 
 
 

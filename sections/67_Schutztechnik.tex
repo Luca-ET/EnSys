@@ -1,31 +1,157 @@
-\section{}
+\section{Schutztechnik}
 
 
-\subsection{}
+\subsection{Aufgaben der Schutztechnik}
+
+\begin{itemize}
+  \item Gewährleistung der Kontinuität des Betriebs und die Stabilität des Netzes
+  \item \textbf{Sicheres, schnelles} und \textbf{selektives} Abschalten der gestörten Netzelemente
+  \item Schutzsystem muss die Fähigkeit haben, den \textbf{Fehlerzustand} vom \textbf{normalen Betriebszustand} genau zu unterscheiden.
+  \item Einleitung von \textbf{Massnahmen}, die sich möglichst eng begrenzt \textbf{auf den Fehlerort} beziehen
+\end{itemize}
 
 
-\subsection{}
+
+\subsection{Selektivität}
+
+\begin{itemize}
+  \item Selektivität gewährleistet, dass im Fehlerfall möglichst nur der fehlerhafte Netzabschnitt oder Verbraucher abgeschaltet wird und andere Netzabschnitte und Verbraucher nicht mit beeinträchtigt werden.
+  \item Erreichen durch \textbf{Staffelung}
+  \begin{itemize}
+    \item Zeitstaffelung
+    \item Stromstaffelung
+    \item Impedanzstaffelung
+  \end{itemize}
+  \item zeitverkürzte Selektivität erzielen:
+  Die zeitverkürzte Selektivitäts-Steuerung (ZSS) nutzt eine Kommunikation zwischen den Leistungsschaltern, um unnötige Verzögerungen zu vermeiden.
+\end{itemize}
 
 
-\subsection{}
+
+\subsection{Überstrom-Zeit-Schutz}
+Die Auswertung der Stromamplitude ist die einfachste Methode den normalen Betriebszustand eines Netzes von einem Netzfehler zu unterscheiden.
+
+\vspace{0.15cm}
+
+\textbf{Anwendung:} Leitungs-, Generator-, Transformator- und Sammelschienenschutz
+
+\subsection{Unabhängiger Maximalstrom Zeitschutz - UMZ}
+Abschnittweise definiert\\
+
+\includegraphics[width=0.98\columnwidth, align=c]{images/Schutztechnik_1.png}
+
+\vspace{0.15cm}
+\subsection{Abhängiges Maximalstrom Zeitschutz - AMZ}
+Als Funktion definiert\\
+$
+\boxed{
+t(I) = \frac{0.14}{\left( \frac{I}{I_P} \right)^{0.02} - 1} \cdot T_P
+}
+$
+
+\vspace{0.15cm}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{} l p{6.5cm} l @{}}
+    $[t(I)]$      & Auslösezeit \dotfill                      & $\text{s}$ \\
+    $[I]$         & Strom \dotfill                            & $\text{A}$ \\
+    $[I_P]$       & Parametrierbarer Anregestrom \dotfill     & $\text{A}$ \\
+    $[T_P]$       & Multiplikator \dotfill                    & $\text{s}$ \\
+\end{tabular}
 
 
-\subsection{}
+
+\subsection{Zeitstaffelung}
+
+\includegraphics[width=0.8\columnwidth, align=c]{images/Schutztechnik_3.jpg}
+
+\vspace{0.15cm}
+
+\begin{minipage}[c]{0.48\columnwidth}
+    %\begin{center}
+        \includegraphics[width=0.98\columnwidth, align=c]{images/Schutztechnik_4.jpg}
+    %\end{center}    
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.38\columnwidth}
+    %\begin{center}
+        \includegraphics[width=0.98\columnwidth, align=c]{images/Schutztechnik_5.jpg}
+    %\end{center} 
+\end{minipage}
+
+\vspace{0.15cm}
+
+\textbf{\textcolor{green}{Vorteile:}} 
+\begin{itemize}
+    \item \textbf{Einfache Methode}, den normalen Betriebszustand eines Netzes von einem Netzfehler zu unterscheiden.
+\end{itemize}
+
+\vspace{0.15cm}
+
+\textbf{\textcolor{red}{Nachteile:}} 
+\begin{itemize}
+    \item Wenn die \textbf{Einspeisung} sich \textbf{ändert}, würde der Strang unter Umständen \textit{unselektiv} abgeschaltet.
+    \item In diesem Fall ist eine \textbf{Fehlerortung nicht mehr möglich}, da nur die Auslösezeit als Hilfsgrösse zur Selektion des Fehlerorts dient.
+    \item Die Auslösezeit nahe der Einspeisung wird immer grösser und somit fliessen \textbf{grössere Kurzschlussströme} eine \textbf{verhältnismässig lange Zeit}.
+    \item Nur in \textbf{radialen Systemen} (Strahlennetz) verwendet.
+\end{itemize}
 
 
-\subsection{}
+\subsection{Distanzschutz}
+
+\includegraphics[width=0.98\columnwidth, align=c]{images/Distanzschutz_1.jpg}
+
+\begin{itemize}
+    \item \textbf{Nachteile des Überstromzeitschutzes}, wie etwa lange Auslösezeiten oder fehlende Selektivität bei Abweichung vom Normalschaltzustand, ist \textbf{behoben}.
+    \item \textbf{Zeitstaffelschutz}, dessen Auslösezeit mit grösser werdender Entfernung zwischen Fehlerstelle und Schutzgerät-Einbauort stufig ansteigt.
+    \item \textbf{Distanz \( \equiv \) Impedanz}
+    \item \textbf{Reiner Kurzschlussschutz.}
+    \item Aus den Messwerten der \textbf{Strom-} und \textbf{Spannungswandler} wird die \textbf{Impedanz} ermittelt.
+    \item $Z_1$: Fehler nah, $Z_3$ Fehler weit weg
+    \item Fehler vorwärts oder rückwärts ist aufgrund der Stromrichtung 
+\end{itemize}
 
 
-\subsection{}
+\subsubsection{Staffelplan des Distanzschutzes}
+\includegraphics[width=0.98\columnwidth, align=c]{images/Distanzschutz_2.jpg}
+
+\begin{itemize}
+    \item selektive Arbeitsweise des Distanzschutzes
+    \item Auslösezeiten \( t_A \) in Abhängigkeit von Entfernung des Fehlers vom Relaisort
+    \item Die stufenförmige Charakteristik der Auslösekennlinien sorgt dafür, dass Netzfehler schneller abgeschaltet werden
+    \item Die vorgelagerten Schutzgeräte dienen als Reserveschutz
+    \item Fehlerortung viel Präziser
+\end{itemize}
 
 
-\subsection{}
 
 
-\subsection{}
+\subsection{Differentialschutz}
 
+\textbf{Prinzip:}
+\begin{itemize}
+    \item Das Erkennungsprinzip beruht auf dem ersten kirchhoffschen Gesetz. 
+    \textit{„Die Summe der zufließenden Ströme in einem elektrischen Knotenpunkt muss gleich der Summe der abfließenden Ströme sein”}
+    \item \( I_{\text{Diff}} = |I_1 + I_2| > 0 \) ist Fehlerfall
+    \item Wird bei Transformatoren angewendet
+\end{itemize}
+\includegraphics[width=0.45\columnwidth, align=c]{images/Differentialschutz.jpg}
+\textbf{Vorteile:}
+\begin{itemize}
+    \item eine unverzögerte Abschaltung an jeder beliebigen Stelle des Schutzbereiches
+    \item Die Abgrenzung des Schutzbereichs an den Leitungsenden. Damit sind, im Gegensatz zum Distanzschutz, 100\,\% der Leitung in Schnellzeit geschützt.
+\end{itemize}
 
-\subsection{}
+\textbf{Nachteile:}
+\begin{itemize}
+    \item keine Reserveschutzfunktionen für die angrenzenden Bereiche.
+\end{itemize}
 
+\subsection[Schwefelhexafluorid (SF6)]{Schwefelhexafluorid ($\mathrm{SF_6}$)}
 
-\subsection{}
++ Sehr gute elektrische Isolierfähigkeit (hohe Durchschlagfestigkeit). \\
++ Hervorragende Lichtbogenlöscheigenschaften.\\
++ Nicht brennbar, ungiftig (im reinen Zustand). \\
+- Sehr hohes Treibhauspotenzial (rund 23.500x stärker als CO2). \\
+- lange Lebensdauer (ca. 3.200 Jahre).\\
+- Bildung giftiger Zersetzungsprodukte bei Lichtbogenentladung.\\

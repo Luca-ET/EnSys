@@ -2,77 +2,85 @@
 
 
 \subsection{Windeleistung}
-
-\includegraphics[width=0.95\columnwidth, align=c]{images/WEK_Leistungs-und_Drehzahlregelung.png}
-
-$
+\begin{minipage}[ht]{0.59\columnwidth}
+    \includegraphics[trim={0 0 3cm 0},clip ,width=0.95\columnwidth, align=c]{images/WEK_Leistungs-und_Drehzahlregelung.png}
+\end{minipage}
+\begin{minipage}[ht]{0.39\columnwidth}
+    $
 \boxed{
 P_{\text{max}} = \frac{dW}{dt} = \frac{A \cdot \rho_{\text{Luft}}}{2} \cdot v_1^3
-}
-\quad
-\boxed{
-P_W = c_P \cdot \frac{A \cdot \rho_{\text{Luft}}}{2} \cdot v_1^3
-}
-$ \quad Achtung! $v_1$ ist hoch 3!
+}$\\
+$\boxed{
+P_W = \frac{P_{\mathrm{el}}}{\eta}=c_P \cdot \frac{A \cdot \rho_{\text{Luft}}}{2} \cdot v_1^3}$\\
+\textcolor{red}{Achtung! $v_1$ ist hoch 3!}
+$\boxed{
+W = \eta \cdot P_W \cdot \Delta t
+}$\\
+$\boxed{
+T = \frac{W_{\text{el pro Jahr}}}{P_{\text{max}}}
+}$\\
+\end{minipage}
+
+
+
+
+
 
 
 \renewcommand{\arraystretch}{1.2}
 \begin{tabular}{@{} l p{8cm} l @{}}
     $[P_{\text{max}}]$ & Theoretische Windleistung \dotfill & $W$ \\
     $[P_W]$            & Effektiv nutzbare praktische Windleistung \dotfill & $W$ \\
-    $[c_P]$            & Leistungsbeiwert, $c_P = 0.4 ... 0.5$ \dotfill & $-$ \\
-    $[A]$              & Rotorfläche (projizierte Fläche senkrecht zur Strömung) \dotfill & $m^2$ \\
-    $[\rho_{\text{Luft}}]$ & Dichte Luft, $\approx 1{,}29 \, \frac{kg}{m^3}$ \dotfill & $\frac{kg}{m^3}$ \\
-    $[v_1]$            & Anströmgeschwindigkeit des Windes \dotfill & $\frac{m}{s}$ \\
+    $[c_P]$            & Leistungsbeiwert, $c_P = 0.4 \dots 0.5$ \dotfill & $-$ \\
+    $[A]$              & Rotorfläche (projizierte Fläche senkrecht zur Strömung) \dotfill & $\mathrm{m^2}$ \\
+    $[\rho_{\text{Luft}}]$ & Dichte Luft, $\approx 1{,}29 \, \frac{\mathrm{kg}}{\mathrm{m^3}}$ \dotfill & $\frac{\mathrm{kg}}{\mathrm{m^3}}$ \\
+    $[v_1]$            & Anströmgeschwindigkeit des Windes \dotfill & $\frac{\mathrm{m}}{\mathrm{s}}$ \\
+    $[\eta]$           & Gesamtwirkungsgrad der Umwandlungskette \dotfill & $-$ \\
+    $[\Delta t]$       & Betrachteter Zeitraum \dotfill & $\mathrm{s}$ \\
+    $[W]$              & Umgewandelte elektrische Arbeit \dotfill & $\mathrm{J}$ \\
 \end{tabular}
 
 
+\subsubsection{Leistungsbeiwert}
+Der Leistungsbeiwert beschreibt, wie viel der im Wind enthaltenen kinetischen Energie eine Windturbine maximal in nutzbare mechanische Leistung umwandeln kann. Laut Betz-Gesetz liegt das theoretische Maximum bei 0,593. In der Praxis erreichen moderne Windturbinen typischerweise Werte zwischen 0,4 und 0,5.
 
-\section{Windenergiekonverter (WEK)}
+\subsubsection{Hohe Windgeschwindigkeiten}
+\begin{itemize}
+    \item Bei höheren Windgeschwindigkeit wird die Leistung begrenzt. Dies geschieht durch eine Pitch-Regelung (Blattwinkelverstellung).\\
+    \item Abschaltung und ausdrehen aus dem Wind.\\
+\end{itemize}
+
+\vspace{-0.4cm}
 \subsection{Netzkopplung}
-
 DU = Direktumrichter, ZKU = Zwischenkreis-Umrichter\\
-
+\vspace{-0.4cm}
 \subsubsection{Direkte Netzkopplung mit ASM}
-\includegraphics[width=0.6\columnwidth]{images/Direkte Netzkopplung mit ASM.png}
-
+\includegraphics[width=0.5\columnwidth]{images/Direkte Netzkopplung mit ASM.png}
+\vspace{-0.4cm}
 \subsubsection{Direkte Netzkopplung mit SM}
-\includegraphics[width=0.6\columnwidth]{images/Direkte Netzkopplung mit SM.png}
-
+\includegraphics[width=0.5\columnwidth]{images/Direkte Netzkopplung mit SM.png}
+\vspace{-0.4cm}
 \subsubsection{Direkte Netzkopplung mit ASM und DU im Läufer}
-\includegraphics[width=0.6\columnwidth]{images/Direkte Netzkopplung mit ASM und Direktumrichter im Läufer.png}
-
+\includegraphics[width=0.5\columnwidth]{images/Direkte Netzkopplung mit ASM und Direktumrichter im Läufer.png}
+\vspace{-0.4cm}
 \subsubsection{Direkte Netzkopplung mit SM über Gleichstromzwischenkreis}
 \begin{itemize}
     \item variable Drehzahl
+    \item Verwendung Offshore wegen Leitungskapazitäten
 \end{itemize}
-
-\vspace{0.1cm}
-
-\includegraphics[width=0.6\columnwidth]{images/Direkte Netzkopplung mit SM über einen Gleichstromzwischenkreis, variable Drehzahl.png}
-
+\includegraphics[width=0.5\columnwidth]{images/Direkte Netzkopplung mit SM über einen Gleichstromzwischenkreis, variable Drehzahl.png}
+\vspace{-0.2cm}
 \subsubsection{Direkte Netzkopplung mit ASM und ZKU im Läufer}
-
-\begin{itemize}
-    \item übersynchrone Strorichter-Kaskade
+\begin{minipage}[ht]{0.5\columnwidth}
+    \begin{itemize}
+    \item übersynchrone Stromrichter-Kaskade
+    \end{itemize}
+\end{minipage}
+\begin{minipage}[ht]{0.5\columnwidth}
+    \begin{itemize}
     \item variable Drehzahl
-\end{itemize}
-
-\vspace{0.1cm}
-
+    \end{itemize}
+\end{minipage}
 \includegraphics[width=0.6\columnwidth]{images/Direkte Netzkopplung mit ASM und Zwischenkreis-umrichter im Läufer.png}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\newcolumn

@@ -40,7 +40,7 @@
 
 \vspace{0.15cm}
 
-
+\columnbreak
 \subsection{Leistungsübertragung}
 
 $
@@ -120,7 +120,6 @@ $Q_1$               & Blindleistung \dotfill & $\mathrm{VAR}$ \\
 $\delta$           & Phasendifferenz \dotfill & $\mathrm{rad}$ \\
 \end{tabular}
 
-\newcolumn
 \subsection{Praxis (Vereinfachung)}
 
 \begin{itemize}
@@ -132,9 +131,18 @@ $\delta$           & Phasendifferenz \dotfill & $\mathrm{rad}$ \\
 Mit den Vereinfachungen (Anfangs Kapitel) und den aufgeführten Punkten ergibt sich:
 \vspace{0.15cm}
 
-$\boxed{P_1 = U_1 \cdot U_2 \cdot \frac{1}{X_L} \cdot \delta}$ 
+\boxed{
+P_{12} = U_1 \cdot U_2 \cdot \frac{1}{X} \cdot \sin(\delta_{12})
+}
 
-$\boxed{Q_1 = U_1 \cdot \frac{1}{X_L} \cdot (U_1 - U_2)}$ 
+\boxed{
+Q_{12} =\frac{U_1^2}{X} - \frac{U_1 \cdot U_2 \cdot \cos(\delta_{12})}{X}
+}
+
+\boxed{
+Q_{21} = \frac{U_2^2}{X} - \frac{U_2 \cdot U_1 \cdot \cos(-\delta_{12})}{X}
+}
+
 
 \vspace{0.15cm}
 
@@ -151,7 +159,7 @@ $\boxed{Q_1 = U_1 \cdot \frac{1}{X_L} \cdot (U_1 - U_2)}$
     \item \textbf{Blindleistung}
     \begin{itemize}
         \item wenig von der Spannungswinkeldifferenz $\delta$
-        \item Stark abhängig von der Spannungsbetragsdifferenz $U_1 - U_2$
+        \item Stark abhängig von der Spannungsbetragsdifferenz $U_1, U_2$
     \end{itemize}
 \end{itemize}
 
@@ -169,7 +177,4 @@ $\boxed{Q_1 = U_1 \cdot \frac{1}{X_L} \cdot (U_1 - U_2)}$
     \boxed{P_{1_{\text{max}}} = \frac{U_1 \cdot U_2}{X_L}}
     $
 \end{minipage}
-
-
-
 

@@ -1,4 +1,4 @@
-\newpage
+\columnbreak
 \section{Kenngrössen Turbinen}
 
 \subsection{Hydraulische Leistung}
@@ -69,7 +69,8 @@ Die Durchgangsdrehzahl ist eine Bemessungsgröße.
 
 Die Maschinengruppe darf bei der Durchgangsdrehzahl keinen Schaden erleiden.
 
-\subsection{Spezifische Drehzahl $n_q$}
+\subsection[\texorpdfstring{Spezifische Drehzahl $n_q$}{Spezifische Drehzahl nq}]
+            {Spezifische Drehzahl $n_q$}
 
 \noindent
 $
@@ -113,7 +114,21 @@ $n_q$ ist die Drehzahl einer Turbine in \(\mathrm{U/min}\), welche bei einem Gef
 
 \newcolumn
 \section{Turbinen}
-
+Kurzüberblick:
+\begin{itemize}
+    \item Aktionsturbinen:
+    \begin{itemize}
+        \item Peltonturbinen
+        \item Durchströmturbinen
+    \end{itemize}
+    \item Reaktionsturbinen:
+    \begin{itemize}
+        \item Francisturbinen
+        \item Kaplanturbinen
+        \item Rohrturbinen
+        \item Kreiselpumpen als Turbinen
+    \end{itemize}
+\end{itemize}
 \subsection{Peltonturbine}
 
 \begin{minipage}[c]{0.48\columnwidth}
@@ -149,13 +164,15 @@ $n_q$ ist die Drehzahl einer Turbine in \(\mathrm{U/min}\), welche bei einem Gef
     \includegraphics[width=0.98\columnwidth, align=c]{images/Pelton_Turbine_Düse_geschlossen.png}   
 \end{minipage}
 
-\begin{tabular}{c l}
-        1 & Düsennadel \\
-        2 & Kolben \\
-        3 & Öl zum öffnen \\
-        4 & Öl zum Schliessen \\
-        5 & Rückmeldung
-\end{tabular}
+\begin{enumerate}
+    \begin{multicols}{2}\setlength{\columnseprule}{0pt}
+        \item Düsennadel
+        \item Kolben
+        \item Öl zum öffnen
+        \item Öl zum Schliessen
+        \item Rückmeldung
+    \end{multicols}
+\end{enumerate}
 
 \subsubsection{Eingenschaften und Merkmale}
 \begin{itemize}
@@ -168,6 +185,21 @@ $n_q$ ist die Drehzahl einer Turbine in \(\mathrm{U/min}\), welche bei einem Gef
     \item Rissen im Bereich der Becherwurzel (hochbelastete Zone) gilt ein spezielles Augenmerk
 \end{itemize}
 
+\subsection{Francisturbinen}
+
+\begin{minipage}[c]{0.48\columnwidth}
+    \includegraphics[width=0.98\columnwidth, align=c]{images/Francis_Turbine.png}    
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\columnwidth}
+    \begin{tabular}{c l}
+        1 & Einlaufspirale \\
+        2 & Leitschaufeln \\
+        3 & Leitschaufelnachse \\
+        4 & Laufrad \\
+        5 & Turbinenwelle
+\end{tabular}  
+\end{minipage}
 
 
 \subsection{Reaktionsturbinen}
@@ -250,25 +282,7 @@ $
 \end{tabular}
 
 
-
-\subsection{Francisturbinen}
-
-\begin{minipage}[c]{0.48\columnwidth}
-    \includegraphics[width=0.98\columnwidth, align=c]{images/Francis_Turbine.png}    
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.48\columnwidth}
-    \begin{tabular}{c l}
-        1 & Einlaufspirale \\
-        2 & Leitschaufeln \\
-        3 & Leitschaufelnachse \\
-        4 & Laufrad \\
-        5 & Turbinenwelle
-\end{tabular}  
-\end{minipage}
-
-
-
+\newcolumn
 \subsection{Kaplanturbinen}
 
 \begin{minipage}[c]{0.48\columnwidth}
@@ -337,9 +351,7 @@ Besteht aus: Generator/Motor, Francisturbine und Speicherpumpe
         \item Unabhängige Optimierung der Turbine und der Pumpe ist möglich.
     \end{itemize}
 
-
-
-
+\newcolumn
 \subsection{Wahl des Generators}
 
 Der Generator muss synchron mit dem Netz drehen. Daher muss die definitive Drehzahl der in der Nähe liegenden Synchrondrehzahl entsprechen.
@@ -365,9 +377,9 @@ $
 \begin{enumerate}
     \item Bestimmung der \textbf{Netto-Fallhöhe} \( H_n \)
     \item Auswahl \textbf{Gesamtdurchfluss} \( Q \), abhängig von Zufluss, Rückhaltemöglichkeit, Einsatztyp (z.B. Spitzenlast)
-    \item Bestimmung der \textbf{hydraulischen Leistung}:
+    \item Bestimmung der \textbf{hydraulischen Leistung} mithilfe der \textbf{elektrischen Leistung} $P_{el} $ und dem Gesamtwirkungsgrad $\eta_{tot}$ :
     \[
-    P_\mathrm{hyd} = \rho \cdot Q \cdot g \cdot H_n
+    P_\mathrm{hyd} = \rho \cdot Q \cdot g \cdot H_n = \frac{P_{el}}{\eta_{tot}}
     \]
     \item Auswahl \textbf{Turbinentyp}, \textbf{Turbinen-Durchfluss} \( Q \) und \textbf{spezifische Drehzahl} \( n_q \) aus Diagrammen\\
     (ggf. Aufteilung \( Q \) auf mehrere Turbinen / Pumpen)
@@ -388,7 +400,8 @@ $
         \item Lösung ist ein Abwägen und iterativer Prozess
     \end{itemize}
 \end{enumerate}
-
+\includegraphics[width=1\linewidth]{images/Turbinentypen.png}
+\textcolor{red}{Peltonturbine}, \textcolor{yellow}{Francisturbine}, \textcolor{blue}{Kaplanturbine}
 
 
 

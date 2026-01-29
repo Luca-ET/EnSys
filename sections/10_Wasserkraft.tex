@@ -1,6 +1,5 @@
-\newpage
-\section{Wasserkraft}
 
+\section{Wasserkraft}
 
 \subsection{Kontinuitätsgleichung des Durchflusses}
 \begin{center}
@@ -49,56 +48,59 @@ $
     \includegraphics[width=0.9\columnwidth, align=c]{images/Bernoulli.png}
 \end{center}
 
-$\boxed{\frac{1}{2} \cdot \rho \cdot v^2 + \rho \cdot g \cdot z + p = \text{constant}}$
+$\boxed{\frac{1}{2} \cdot \rho \cdot v^2 + \rho \cdot g \cdot z + p =E_{kin}+E_{pot}+p= E_{tot}=H\cdot\rho\cdot g=\mathrm{const.}}$
+$\boxed{E_{kin}=\frac{1}{2} \rho v^2}$
 
-\vspace{0.15cm}
-
-$
+$\\
 \boxed{
 p_1 + \rho \cdot g \cdot h_1 + \frac{1}{2} \rho \cdot v_1^2 
 = 
 p_2 + \rho \cdot g \cdot h_2 + \frac{1}{2} \rho \cdot v_2^2
 }
 $
-
+$\boxed{p = \left(H-z-\frac{v^2}{2g}\right)\cdot\rho\cdot g}$
+$\boxed{E_{pot} = \rho g z}$
 \vspace{0.15cm}
 
 \renewcommand{\arraystretch}{1.2} % Erhöht Zeilenhöhe für bessere Lesbarkeit
 \begin{tabular}{@{} l p {6cm} l @{}}
-    $[\frac{1}{2} \rho v^2]$ & Kinetische Energie (je Kubikmeter) \dotfill & $\mathrm{\frac{J}{m^3}}$ \\
-    $[\rho g z]$             & Potentielle Energie                 \dotfill & $\mathrm{\frac{J}{m^3}}$ \\
-    $[p]$                    & Druckenergie                        \dotfill & $\mathrm{\frac{J}{m^3}}$ \\
+    $[E_{kin}]$ & Kinetische Energie (pro Kubikmeter) \dotfill & $\mathrm{\frac{J}{m^3}}$ \\
+    $[E_{pot}]$             & Potentielle Energie (pro Kubikmeter)                \dotfill & $\mathrm{\frac{J}{m^3}}$ \\
+    $[p]$                    & Druckenergie (pro Kubikmeter)                       \dotfill & $\mathrm{\frac{J}{m^3}}$ \\
 \end{tabular}
-
-
-\vspace{0.15cm}
-
-$
-\underbrace{p}_{A} + \underbrace{\rho g z}_{B} + \underbrace{\frac{1}{2}\rho v^2}_{C} = \underbrace{\text{constant}}_{D}
-$
 
 
 \subsection{Bernoulli-Höhen-Gleichung für Speicherwasserkraftwerke}
 
 $\boxed{H = z + \frac{p}{\rho \cdot g} + \frac{v^2}{2 \cdot g} + \sum H_v}$
+$\boxed{h_p = H-z-\frac{v^2}{2g}}$
+$\boxed{h_v = \frac{v^2}{2g}}$
+$\boxed{l_h = \frac{z}{H}\cdot100}$\\
 
-\vspace{0.15cm}
 
 \renewcommand{\arraystretch}{1.3} % Erhöht Zeilenhöhe für bessere Lesbarkeit
 \begin{tabular}{@{} l p {4cm} l @{}}
-    $[H]$                           & Bruttogefälle                              \dotfill & $\mathrm{m}$ \\
-    $[z]$                           & Höhenlage (potenzielle Energie)            \dotfill & $\mathrm{m}$ \\
-    $[p]$                           & Druck                                      \dotfill & $\mathrm{Pa} = \mathrm{\frac{N}{m^2}}$ \\
-    $[\rho]$                        & Dichte des Wassers                         \dotfill & $\mathrm{\frac{kg}{m^3}}$ \\
-    $[g]$                           & Erdbeschleunigung                          \dotfill & $\mathrm{\frac{m}{s^2}}$ \\
-    $[v]$                           & Geschwindigkeit                            \dotfill & $\mathrm{\frac{m}{s}}$ \\
-    $\left[\frac{p}{\rho g}\right]$ & Druckhöhe                                  \dotfill & $\mathrm{m}$ \\
-    $\left[\frac{v^2}{2g}\right]$   & Geschwindigkeitshöhe                       \dotfill & $\mathrm{m}$ \\
+    $[H]$                           & Bruttofallhöhe                              \dotfill & $\mathrm{m}$ \\
+    $[z]$                           & Höhe                                   \dotfill & $\mathrm{m}$ \\
+    $[p]$                           & Druck                                       \dotfill & $\mathrm{Pa} = \mathrm{\frac{N}{m^2}}$ \\
+    $[\rho]$                        & Dichte des Wassers $1000\,\mathrm{\frac{kg}{m^3}}$\dotfill & $\mathrm{\frac{kg}{m^3}}$ \\
+    $[g]$                           & Erdbeschleunigung                           \dotfill & $\mathrm{\frac{m}{s^2}}$ \\
+    $[v]$                           & Geschwindigkeit                             \dotfill & $\mathrm{\frac{m}{s}}$ \\
+    $[h_p]$                         & Druckhöhe                               \dotfill & $\mathrm{m}$ \\
+    $[h_v]$   & Geschwindigkeitshöhe                       \dotfill & $\mathrm{m}$ \\
     $[\sum H_v]$                    & Hydraulische Energieverluste               \dotfill & $\mathrm{m}$ \\
+    $[l_h]$                    & Höhenlage               \dotfill & $\mathrm{\%}$ \\
 \end{tabular}
 
 
-\newcolumn
+Umrechnung in Energie: alle Höhen mit $\rho\cdot g = 1000\, \mathrm{kg/m^3} \cdot 9.81\, \mathrm{m/s^2}$ multiplizieren.
+
+\includegraphics[width=0.9\columnwidth, align=c, trim={0 90 0 5},clip]{images/Bild_übersicht_Wasserkraft.png}
+
+
+
+
+
 \subsection{Örtliche Energieverluste}
 
 $\boxed{h_v = \zeta \cdot \frac{v^2}{2g}}$
@@ -113,7 +115,12 @@ $\boxed{h_v = \zeta \cdot \frac{v^2}{2g}}$
     $[g]$       & Erdbeschleunigung             \dotfill & $\mathrm{\frac{m}{s^2}}$ \\
 \end{tabular}
 
-
+Berechnung des Verlustbeiwert $\zeta\in[0,1]$ aus zwei gegebenen  Durchmesser $d_1$ und $d_2$.
+Für Rohrerweiterung:
+\[
+\zeta = \left(1 - \left(\frac{d_1}{d_2}\right)^2\right)^2
+\]
+für $d_1<d_2$
 
 \subsection{Reibungsverluste (Formel von Strickler)}
 
@@ -209,13 +216,9 @@ $\boxed{h_{\text{v,r}} = \frac{v^2 \cdot L}{K_{St}^2 \cdot R_h^{4/3}}}$
 
 
 
-\subsection{Verlusthöhe durch Reibung}
+\subsection{Verlusthöhe durch Rohrreibung (Alternative zu Strickler)}
 
-$\boxed{h_{\text{v,r}} = \lambda \cdot \frac{L}{d_{\text{hy}}} \cdot \frac{v^2}{2 \cdot g} }
-\quad
-\boxed{h_{\text{v,r}} = \lambda \cdot \frac{L}{d_i} \cdot \frac{8 \cdot Q^2}{g \cdot \pi^2 \cdot d_i^4}}
-\quad
-\boxed{h_{\text{v,r}} = \frac{8 \cdot \lambda \cdot L \cdot Q^2}{g \cdot \pi^2 \cdot d_i^5}}$
+$\boxed{h_{\text{v,r}} = \lambda\frac{L\cdot v^2}{2 \cdot g \cdot d_{\text{hy}}}  =\lambda  \frac{8 \cdot L \cdot Q^2}{g \cdot \pi^2 \cdot d_i^5}}$
 
 \vspace{0.15cm}
 
@@ -242,9 +245,7 @@ $
 \boxed{d_{\text{hy}} = d_{\text{Kreisrohr}} = d_i = 4 \cdot R_{\text{hy}} = 4 \cdot \left(\frac{A}{l_u}\right)}
 $
 
-
-\newcolumn
-\subsection{Reynolds-Zahl $\text{Re}$}
+\subsection{Reynolds-Zahl \texorpdfstring{$\text{Re}$}{Re}}
 
 Die Reynolds-Zahl $\text{Re}$ beschreibt das Verhältnis von Trägheitskräften zu Zähigkeitskräften in einer Strömung und wird wie folgt berechnet:
 
@@ -263,7 +264,13 @@ $\boxed{\text{Re} = \frac{v_m \cdot d_{\text{hy}}}{\nu}}$ \quad Bemerkung: $d_{\
     $[\nu]$           & Kinematische Viskosität                              \dotfill & $\mathrm{\frac{m^2}{s}}$ \\
 \end{tabular}
 
-
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+    Temperatur $\mathrm{^\circ}C$ &0&10&20&30  \\
+    \hline
+    kinematische Viskosität $\nu$ & $1.78\cdot10^{-6}$ & $1.30\cdot10^{-6}$ &$1.00\cdot10^{-6}$ &$8.06\cdot10^{-7}$\\
+    \hline
+\end{tabular}
 
 
 \subsection{Verlustbeiwert }
@@ -289,7 +296,7 @@ $
 
 
 
-\subsection{Nettogefälle $H_n$}
+\subsection{Nettogefälle \texorpdfstring{$H_n$}{Hn}}
 $
 \boxed{
 H_n = H - \sum H_v - \frac{v^2}{2g}
@@ -297,6 +304,8 @@ H_n = H - \sum H_v - \frac{v^2}{2g}
 \quad
 \boxed{\sum H_v = C \cdot Q^2}
 $
+
+Achtung: Falls örtliche Energieverluste bereits berechnet wurde, kann auf den Term $\frac{v^2}{2g}$ verzichtet werden.
 
 \vspace{0.15cm}
 
@@ -313,12 +322,12 @@ $
 
 
 
-\subsection{Hydraulische Leistung $P_{\text{hyd}}$}
+\subsection{\texorpdfstring{Hydraulische Leistung $P_{\text{hyd}}$}{Hydraulische Leistung Phyd}}
 
 $
 \boxed{P_{\text{hyd}} = \frac{m \cdot g \cdot H_n}{t} }
 \quad
-\boxed{P_{\text{hyd}} = \rho \cdot Q \cdot g \cdot H_n}
+\boxed{P_{\text{el}} = \rho \cdot Q \cdot g \cdot H_n \cdot \eta_{\text{ges}}}
 \quad
 \boxed{\frac{\text{m}}{\text{t}} = \rho \cdot Q}
 $
@@ -329,16 +338,15 @@ $
 \begin{tabular}{@{} l p{6cm} l @{}}
     $[P_{\text{hyd}}]$  & Hydraulische Leistung \dotfill                & $\text{W}$ \\
     $[m]$               & Masse \dotfill                                & $\text{kg}$ \\
-    $[g]$               & Erdbeschleunigung, $g = 9{,}81$ \dotfill      & $\frac{\text{m}}{\text{s}^2}$ \\
     $[H_n]$             & Nettofallhöhe \dotfill                        & $\text{m}$ \\
     $[t]$               & Zeit \dotfill                                & $\text{s}$ \\
     $[\rho]$            & Dichte des Wassers, $\rho = 1000$ \dotfill    & $\frac{\text{kg}}{\text{m}^3}$ \\
     $[Q]$               & Nutzwassermenge \dotfill                      & $\frac{\text{m}^3}{\text{s}}$\\ 
+    $[\eta]$            & Wirkungsgrad (Turbine, Generator) \dotfill & $-$ \\
 \end{tabular}
 
-
-
-\subsection{Mechanische Leistung $P_{\text{mech}}$}
+\subsection[\texorpdfstring{Mechanische Leistung $P_{\text{mech}}$ (Turbinenleistung)}{Mechanische Leistung Pmech (Turbinenleistung)}]
+{Mechanische Leistung $P_{\text{mech}}$ (Turbinenleistung)}
 
 $
 \boxed{P_{\text{mech}} = \eta_t \cdot P_{\text{hyd}}} 
@@ -350,14 +358,14 @@ $
 
 \renewcommand{\arraystretch}{1.2}
 \begin{tabular}{@{} l p{7cm} l @{}}
-    $[P_{\text{mech}}]$  & Mechanische Leistung an der Turbinen-Generator-Welle \dotfill & $\text{W}$ \\
     $[P_{\text{hyd}}]$   & Hydraulische Leistung \dotfill                               & $\text{W}$ \\
     $[\eta_t]$           & Turbinenwirkungsgrad \dotfill                               & $-$ \\
 \end{tabular}
 
 
 
-\subsection{Elektrische Leistung $P_{\text{el}}$}
+\subsection[\texorpdfstring{Elektrische Leistung $P_{\text{el}}$}{Elektrische Leistung Pel}]
+            {Elektrische Leistung $P_{\text{el}}$}
 
 $
 \boxed{P_{\text{el}} = \eta_g \cdot P_{\text{mech}}} 
@@ -365,18 +373,19 @@ $
 \boxed{P_{\text{el}} = \eta_g \cdot \eta_t \cdot \rho \cdot Q \cdot g \cdot H_n}
 $
 
+Falls mehr Wirkungsgrade als nur die der Turbine und des Generators angegeben sind, müssen diese zwingend ebenfalls berücksichtigt werden.
+
 \vspace{0.15cm}
 
 \renewcommand{\arraystretch}{1.2}
 \begin{tabular}{@{} l p{6cm} l @{}}
-    $[P_{\text{el}}]$     & Elektrische Leistung an den Generatorklemmen \dotfill & $\text{W}$ \\
-    $[P_{\text{mech}}]$   & Mechanische Leistung \dotfill                          & $\text{W}$ \\
     $[\eta_g]$            & Generatorwirkungsgrad \dotfill                         & $-$ \\
 \end{tabular}
 
 
 
-\subsection{Elektrische Energie $E$}
+\subsection[\texorpdfstring{Elektrische Energie $E$}{Elektrische Energie E}]
+            {Elektrische Energie $E$}
 
 $
 \boxed{E = \int P_{\text{el}} \cdot dt}
@@ -390,14 +399,11 @@ $
 
 \renewcommand{\arraystretch}{1.2}
 \begin{tabular}{@{} l p{6cm} l @{}}
-    $[E]$               & Elektrische Energie \dotfill                           & $\text{Ws}$ \\
-    $[P_{\text{el}}]$   & Elektrische Leistung \dotfill                          & $\text{W}$ \\
     $[\eta_g]$          & Generatorwirkungsgrad \dotfill                         & $-$ \\
     $[\eta_t]$          & Turbinenwirkungsgrad \dotfill                          & $-$ \\
     $[Q]$               & Nutzwassermenge \dotfill                               & $\frac{\text{m}^3}{\text{s}}$ \\
     $[H_n]$             & Nettofallhöhe \dotfill                                 & $\text{m}$ \\
     $[\rho]$            & Dichte des Wassers, $\rho = 1000$ \dotfill             & $\frac{\text{kg}}{\text{m}^3}$ \\
-    $[g]$               & Erdbeschleunigung, $g = 9{,}81$ \dotfill               & $\frac{\text{m}}{\text{s}^2}$ \\
     $[t]$               & Zeit \dotfill                                           & $\text{s}$ \\
 \end{tabular}
 

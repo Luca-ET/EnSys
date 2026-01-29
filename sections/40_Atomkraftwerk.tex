@@ -64,25 +64,180 @@ $\boxed{A = Z + N}$ \quad Nuklid-Schreibweise: $\boxed{\text{\ce{^{A}_{Z}Element
     \1 Werden genügend thermische Neutronen zur Verfügung gestellt, hält sich durch eine Kettenreaktion der Spaltungsprozess selbst aufrecht.
 \end{outline}
 
+\section{Gasturbinenkraftwerke}
+Luft wird in einem Verdichter komprimiert. 
+Die komprimierte Luft wird in einer Brennkammer mit Brennstoff (z.B. Erdgas, Heizöl) gemischt und verbrannt, wodurch heisse Gase entstehen. 
+Diese heissen Gase expandieren in einer Turbine und treiben diese an. 
+Die Turbine treibt wiederum den Verdichter und einen Generator zur Stromerzeugung an. \\
+\textbf{Vorteile gegenüber Dampfturbinen-Kraftwerken}\\
+\begin{itemize}
+    \item Schnelle Startzeit und hohe Flexibilität: Gasturbinen können sehr schnell hoch- und heruntergefahren werden, was sie ideal für die Abdeckung von Spitzenlasten macht. 
+    \item Geringerer Kühlwasserbedarf
+    \item Kompaktere Bauweise
+    \item Geringere Investitionskosten
+    \item Geringere Emissionswerte (bei Erdgasbetrieb) im Vergleich zu konventionellen Kohle-Dampfkraftwerken. 
+\end{itemize}
 
-\crd{To be continued ...}
+\subsection{Vor- und Nachteile}
+\begin{itemize}
+    \item \textcolor{green}{Vorteile:}
+    \begin{itemize}
+        \item Kompakter und einfacher Aufbau
+        \item Hohe Leistungsdichte
+        \item Schnelle Bereitschaft
+        \item Relativ preisgünstige Investition
+    \end{itemize}
+    \item \textcolor{red}{Nachteile:}
+    \begin{itemize}
+        \item Nur hochwertige, schwefelarme Brennstoffe (Erdgas) sind wegen Schaufelkorrosion verwendbar.
+        \item Begrenzter Wirkungsgrad
+    \end{itemize}
+\end{itemize}
+\subsection{Funktionsprinzip}
+\begin{minipage}[c]{1\columnwidth}
+    $\boxed{du=c_v\cdot dT}$ Enthalpie bei isochorer (konstantes Volumen) Zustandsänderung\\
+    $\boxed{dh=c_p\cdot dT}$ Enthalpie bei adiabatischer (Wärmedichte) Zustandsänderung\\
+    $\boxed{R = c_p-c_v}$
+    $\boxed{\kappa = \frac{c_p}{c_v}}$ 
+    \begin{itemize}
+        \item Einatomige Gase : $\kappa = 1.66$ (Helium, Neon, Argon, Krypton, Xenon, Radon)
+        \item Zweiatomige Gase : $\kappa = 1.40$ (Moleküle mit zwei Atomen)
+        \item Dreiatomige Gase: $\kappa = 1.30$ (Moleküle mit drei Atomen)
+    \end{itemize}
+    $\boxed{\Pi = \frac{p_2}{p_1} = \left( \frac{T_2}{T_1}\right)^{\frac{\kappa}{\kappa-1}}=\frac{p_3}{p_4}=\left( \frac{T_3}{T_4}\right)^{\frac{\kappa}{\kappa-1}}}$
+    $\boxed{\frac{T_1}{T_2}=\frac{T_4}{T_3}}$\\
+    $\boxed{\eta_\mathrm{th} = 1- \frac{Q_{\mathrm{ab}}}{Q_{\mathrm{zu}}} = 1-\frac{T_4-T_1}{T_3-T_2}=1-\frac{T_1}{T_2}=1-\frac{T_4}{T_3}=1-\Pi^{\frac{1-\kappa}{\kappa}}}$
+    \begin{tabular}{@{} l p{6cm} l @{}}
+        $[Q_{zu}]$ & Zugeführte Wärme \dotfill & $\mathrm{K}$ \\
+        $[Q_{ab}]$ & Abgeführte Wärme \dotfill & $\mathrm{K}$ \\
+        $[T_i]$ & Temperatur $i$ \dotfill &  $\mathrm{K}$ \\
+        $[p_i]$ & Druck $i$ \dotfill &  $\mathrm{Pa = \frac{N}{m^2}}$ \\
+        $[\eta_\mathrm{th}]$ & Wirkungsgrad \dotfill & $-$ \\
+        $[\Pi]$ & Druckverhältnis \dotfill & $-$ \\
+        $[R]$ & Spezifische Gaskonstante $8.314462$ \dotfill & $\mathrm{\frac{J}{mol\cdot K}}$ \\
+        $[c_v]$ & Wärmekapazität (konstantes Volumen) \dotfill & $\mathrm{\frac{J}{kg\cdot K}}$ \\
+        $[c_p]$ & Wärmekapazität (konstanter Druck) \dotfill & $\mathrm{\frac{J}{kg\cdot K}}$ \\
+        $[\kappa]$ & Isotropen- bzw. Adiabatenexponent \dotfill & $-$ \\
+
+        
+        
+    \end{tabular}
+\end{minipage}
+\includegraphics[width=1\linewidth]{images/FktprinzipGasturbine.png}
+
+\subsection{Thermodynamische Grundlage}
+\includegraphics[width=1\linewidth]{images/ThermodynamischeGrundlage.png}
+
+\subsection{Gasturbine mit Luftvorwärmer}
+Verbesserung des offenen GT - Prozesses\\
+Vom Brennstoff aufzubringende Wärme verringert sich um $q_{WT}$, respektive die and die Umgebung abzuführende Wärme verringert sich um $q_{WT}$. Dadurch ergibt sich eine Verbesserung des therm. Wirkungsgrades.
+\includegraphics[width=1\linewidth]{images/GasturbineLuftvorwärme.png}
+
+\subsection{Gas- und Dampfturbinenkraftwerke (GuD)}
+\begin{minipage}[c]{0.5\columnwidth}
+    \includegraphics[width=1\linewidth]{images/GuD.png}
+\end{minipage}
+\begin{minipage}[c]{0.5\columnwidth}
+    Eigenschaften:
+    \begin{itemize}
+        \item Gasturbine
+        \begin{itemize}
+            \item hohe Wärmeeintrittstemperatur (bis $1200\, \mathrm{^\circ C}$)
+            \item hohe Wärmeaustrittstemperatur (ca. $500\, \mathrm{^\circ C}$) Dampfturbinen
+        \end{itemize}
+        \item Dampfturbine
+        \begin{itemize}
+            \item Relative niedrige Wärmeeintrittstem- peratur ($\le 550\, \mathrm{^\circ C}$)
+            \item Niedrige Austrittstemperatur (ca. $40\, \mathrm{^\circ C}$)
+        \end{itemize}
+    \end{itemize}
+\end{minipage}
+Kombination beider Prozesse $\Rightarrow$ GuD mit hohem Wirkungsgrad
+\begin{itemize}
+    \item \textcolor{green}{Vorteile:}
+    \begin{itemize}
+        \item $5 - 10\, \mathrm{\%}$ höherer Wirkungsgrad als reine Dampf-KW
+        \item Gutes Teillastverhalten (wichtig bei Lastfolgebetrieb, Einsatz Sekundärregulierung)
+        \item Kostengünstiger Umbau älterer Dampf-KW
+        \item Geringere Abwärme
+    \end{itemize}
+    \item \textcolor{red}{Nachteile:}
+    \begin{itemize}
+        \item $25 - 30\, \mathrm{\%}$ der zugeführten Wärme muss in Form eines hochwertigen Brennstoffes (Gas) erfolgen.
+        \item Instandhaltungsaufwand an der hochbeanspruchten Gasturbine, Stillstandzeiten wegen der GT
+    \end{itemize}
+\end{itemize}
 
 
 
 
+\subsubsection{Kombianlagen für Kraft-/Wärmekopplung (KWK)}
+Thermische Kraftwerke (Wärme- Kraft- Prinzip) geben aufgrund physikalischer Randbedingungen einen grossen Teil der Wärme als Anergie ($60 - 70\, \mathrm{\%}$) an die Umgebung ab.\\
+$\Rightarrow$ Mit der Nutzung der Abwärme kann der Gesamtwirkungsgrad wesentlich verbessert werden.
+
+\begin{minipage}[c]{0.5\columnwidth}
+\includegraphics[width=1\linewidth]{images/KwK.png}
+\end{minipage}
+\begin{minipage}[c]{0.5\columnwidth}
+\begin{itemize}
+    \item Abwärme wird für Prozess- oder Heizzwecke genutzt
+    \item Gesamtwirkungsgrad bis $90\, \mathrm{\%}$
+    \item Einen Freiheitsgrad: Strom und Wärme können nur gemeinsam erzeugt werden
+    \item Zwei Freiheitsgrade: gekoppelt und ungekoppelt möglich
+\end{itemize}
+Wichtigste Anlagentypen:
+\begin{itemize}
+    \item Heizkraftwerk mit Gegendruckturbine
+    \item Gasturbinenheizkraftwerk
+    \item Heizkraftwerk mit Verbrennungsmotor (BHKW)
+    \item Auskopplung von Prozessdampf hoher Temperatur
+\end{itemize}
+\end{minipage}
+Wirkungsgrad:\\
+\begin{minipage}[c]{0.2\columnwidth}
+    $\boxed{\eta_{\mathrm{KWK}} = \frac{W_{\mathrm{el}}+Q_{\mathrm{H}}}{W_{\mathrm{BS}}}}$
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.6\columnwidth}
+    \begin{tabular}{@{} l p{4cm} l @{}}
+        $[W_{\mathrm{el}}]$ & Stromproduktion \dotfill & $\mathrm{kWh}$ \\
+        $[Q_{\mathrm{H}}]$  & Wärmeauskopplung \dotfill & $\mathrm{J}$ \\
+        $[W_{\mathrm{BS}}]$ & Zugeführte Brennstoffenergie\dotfill & $\mathrm{J}$ \\
+    \end{tabular}
+\end{minipage}
+
+\subsection{Solarthermische Kraftwerke}
+Stromerzeugung wie bei thermischen Kraftwerken, jedoch mit Sonne
+Arten:
+\begin{itemize}
+    \item Parabolrinnenkonzentrator
+    \item Heliostatenfeld mit Turm
+    \item Paraboloid-Dish
+    \item Fresnel-Linse
+\end{itemize}
+
+\subsection{Geothermische Kraftwerke}
+\begin{itemize}
+    \item Temperatur im Innern der Erde: \text{$5000\text{–}6000\,^\circ\text{C}$} Wärmestrom zur Oberfläche (Abkühlung)
+    \item Temperaturgradient: $3\, \mathrm{K}$ pro $100\, \mathrm{m}$
+    \item Geothermische Anomalien → neben der Wärmeleitung noch Konvektion bzw. Wärmetransport durch Materialtransport (Aufstieg von glutflüssigem Magmas oder aufwärtsgerichtete Grundwasserbewegungen, aber meist in Erdbebengebiten)
+    \item Umweltbeeinflussung:
+    \begin{itemize}
+        \item chemisch agressive und z.T. giftige Bestandteile ->Bauteiele müssen Korrisionsbeständig sein
+        \item Zurückpumpen, verhindert auch das Absenken des Bodens
+    \end{itemize}
+\end{itemize}
+
+\subsection{Verstromung von Biomasse}
+Energiegewinnung aus Pflanzen oder Pflanzenresten
+Verwendete Materialien:
+\begin{itemize}
+    \item eigens dafür kultivierte landwirtschaftliche Nutzpflanzen wie Mais oder Raps
+    \item schnell wachsende Gehölze
+    \item Abfall- und Reststoffe aus Landwirtschaft, Haushalten und Industrie (beispielsweise Hackschnitzel aus der
+Holzindustrie, Altfett aus der Lebensmittelherstellung, aber auch Klärschlamm)
+
+\end{itemize}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\newcolumn

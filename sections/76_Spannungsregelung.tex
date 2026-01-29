@@ -1,39 +1,173 @@
 \section{Spannungsregelung}
-Unter Spannungsstabilität versteht man die Fähigkeit eines Stromversorgungssystems, an allen Bussen im System konstante Spannungen aufrechtzuerhalten, nachdem es einer Störung aus einem gegebenen Betriebszustand ausgesetzt wurde.
+Unter Spannungsstabilität versteht man die Fähigkeit eines Stromversorgungssystems, an allen Bussen (Knoten) im System konstante Spannungen aufrechtzuerhalten, nachdem es einer Störung aus einem gegebenen Betriebszustand ausgesetzt wurde.
 
 
 \subsection{Spannungskollaps}
+
+\begin{itemize}
+    \item Spannung zu hoch: Isolationsdurchbruch
+    \item Spannung zu tief: Spannungskollaps
+    \item Abhängig von Nasenkurve
+\end{itemize}
+
+\vspace{0.15cm}
+
+\includegraphics[width=0.98\columnwidth, align=c]{images/Spannungsregelung_1.jpg}
+
+\vspace{0.15cm}
 
 \includegraphics[width=0.68\columnwidth, align=c]{images/Spannungsregelung_2.jpg}
 
 \vspace{0.15cm}
 
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{center}
+        \includegraphics[width=0.98\columnwidth, align=c]{images/Spannungsregelung_3.jpg}
+    \end{center}    
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{center}
+        \includegraphics[width=0.98\columnwidth, align=c]{images/Spannungsregelung_4.jpg}
+    \end{center}
+\end{minipage}
 
-\subsection{}
+\vspace{0.3cm}
+
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{center}
+        \includegraphics[width=0.98\columnwidth, align=c]{images/Spannungsregelung_5.jpg}
+    \end{center}    
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{center}
+        \includegraphics[width=0.98\columnwidth, align=c]{images/Spannungsregelung_7.jpg}
+    \end{center}
+\end{minipage}
+
+\vspace{0.15cm}
+
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{center}
+        \includegraphics[width=0.98\columnwidth, align=c]{images/Spannungsregelung_6.jpg}
+    \end{center}    
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{center}
+        \includegraphics[width=0.98\columnwidth, align=c]{images/Spannungsregelung_8.jpg}
+    \end{center}
+\end{minipage}
 
 
-\subsection{}
+
+\subsection{Spannungs-Blindleistungs-Regelung}
+
+\subsubsection{Spannungsänderung}
+
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{center}
+        \includegraphics[width=0.98\columnwidth, align=c]{images/Spannungs-Blindleistungs-Regelung_1.png}
+    \end{center}    
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.48\columnwidth}
+        \includegraphics[width=0.5\columnwidth, align=c]{images/Spannungs-Blindleistungs-Regelung_2.jpg}
+\end{minipage}
+
+\vspace{0.15cm}
+
+$
+\boxed{\Delta U_{\%} = \frac{\Delta Q}{S_K} \cdot 100\%} 
+\quad
+\boxed{\Delta U = \frac{\Delta Q}{S_K} \cdot U} 
+$
+
+\vspace{0.15cm}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{} l p{6cm} l @{}}
+    $[S_K]$  & Kurzschlussleistung \dotfill               & $\text{VA}$ \\
+    $[\Delta Q]$ & Veränderung der Blindleistung \dotfill & $\text{VAR}$ \\
+    $[U]$ & Referenz-Spannung ($\mathrm{220 \ kV}$ oder $\mathrm{380 \ kV}$) \dotfill & $\mathrm{V}$ \\
+    $[\Delta U]$ & Spannungsänderung \dotfill & $\mathrm{V}$ \\
+    $[\Delta U_{\%}]$ & Spannungsänderung in Prozent \dotfill & $\%$ \\
+\end{tabular}
+
+Eine Kapazität speist kapazitive Blindleistung ein, was den Spannungsfall über der Netzimpedanz verringert bzw. kompensiert. Dadurch erhöht sich die Knotenspannung.
+
+\subsubsection{Blindleistung}
+
+\begin{itemize}
+    \item Q-Bilanz eines Netzes ist immer ausgeglichen
+    \item Q wirkt unmittelbar und lokal auf U
+    \item Q fließt von höherer zu tieferer U
+    \item Wenn Blindleistung aus dem Netz genommen wird sinkt die Spannung
+\end{itemize}
+
+\vspace{0.15cm}
+
+\includegraphics[width=0.75\columnwidth, align=c]{images/Spannungs-Blindleistungs-Regelung_3.jpg}\\
 
 
-\subsection{}
+
+\subsection{Grundlagen Spannungshaltung}
+\includegraphics[width=0.98\columnwidth, align=c]{images/Grundlagen_Spannungshaltung_1.jpg}
 
 
-\subsection{}
+
+\subsection{Spannunshaltung in der Schweiz}
+\includegraphics[width=0.98\columnwidth, align=c]{images/Spannunshaltung_in_der_Schweiz_1.jpg}
 
 
-\subsection{}
+\subsection{Kraftwerke}
+
+\begin{itemize}
+    \item geregelte Blindleistungsquellen
+    \item Vergütung der anforderungskonformen Lieferung von Blindleistung.
+\end{itemize}
+
+\vspace{0.15cm}
+
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{center}
+        \includegraphics[width=0.98\columnwidth, align=c]{images/Kraftwerke_1.jpg}
+    \end{center}    
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.48\columnwidth}
+    \begin{center}
+        \includegraphics[width=0.8\columnwidth, align=c]{images/Kraftwerke_2.jpg}
+    \end{center} 
+\end{minipage}
 
 
-\subsection{}
+\subsection{Unterlagerte Netze}
+
+\begin{minipage}[c]{0.38\columnwidth}
+    \begin{center}
+        \includegraphics[width=0.98\columnwidth, align=c]{images/Unterlagerte_Netze.jpg}
+    \end{center}    
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.58\columnwidth}
+    \[
+    \boxed{
+        K = \frac{|\Delta U_m|}{|W_Q|} \leq \frac{1}{K_{\text{max}}}
+    }
+    \]
+    \vspace{0.2cm}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{@{} l p{3cm} l @{}}
+        $[W_P]$  & Wirkenergieaustausch     \dotfill    &   $\text{W}$ \\
+        $[W_Q]$  & Blindenergieaustausch    \dotfill    &   $\text{var}$ \\
+        $[LF]$   & Leistungsfaktor (0{,}9–1)   \dotfill    &   $\text{-}$ \\
+        $[\Delta U_m]$ & Spannungsabweichung  \dotfill    &   $\text{kV}$ \\
+        $[K]$    & Verhältnis Spannungsabweichung zu Blindenergie \dotfill & $\text{kV}/\text{Mvarh}$
+    \end{tabular}
 
 
-\subsection{}
+Für einen Arbeitspunkt A wird die Blindenergie, die der Überschreitung des blauen Bereichs entspricht, in Rechnung gestellt.
 
-
-\subsection{}
-
-
-\subsection{}
-
-
-\subsection{}
+\end{minipage}

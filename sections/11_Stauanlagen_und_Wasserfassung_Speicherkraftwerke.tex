@@ -67,9 +67,169 @@
   \item Grundablass
 \end{enumerate}
 
+\newcolumn
+
+\section{Synchronmaschinen}
+\subsection{Typen}
+\begin{minipage}[c]{0.49\columnwidth}
+    \includegraphics[width=1\linewidth]{images/Schenkelpolmaschine.png}
+        \begin{tabular}{c}
+            Zwei oder vier Pole\\
+            $n=3000$ oder $5000\, \mathrm{U/min}$\\
+            Sinusförmiges Magnetfeld
+        \end{tabular}
+\end{minipage}
+\begin{minipage}[c]{0.49\columnwidth}
+    \includegraphics[width=1\linewidth]{images/Vollpolmaschine.png}
+        \begin{tabular}{c}
+            $>80$ Einzelpole möglich\\
+            Langsam drehend, gut für Wasserkraft\\
+            Eher rechteckiges Magnetfeld
+        \end{tabular}
+\end{minipage}
+
+\subsection{Betriebsarten Generator}
+\subsubsection{Leerlauf}
+\begin{minipage}[c]{0.3\columnwidth}
+    $\boxed{U_p = \frac{1}{\sqrt{2}}2\pi f w_1\xi_1\Phi_h}$
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.69\columnwidth}
+    \begin{tabular}{@{} l p{4cm} l @{}}
+    $[U_p]$      & Polradspannung \dotfill & $\text{V}$ \\
+    $[f]$        & Frequenz = Mech.$f*p$ \dotfill & $\mathrm{Hz}$ \\
+    $[w_1\xi_1]$ & Wirk Windungszahl Stator \dotfill& $-$ \\
+    $[\Phi_h]$   & Magn. Fluss durch Erregerstrom $I_{\mathrm{E}}$ \dotfill& $\mathrm{Wb}$\\
+\end{tabular}
+\end{minipage}\\
+\subsubsection{Generator mit Last}
+\begin{minipage}[c]{0.45\columnwidth}
+    $\boxed{\underline{U}_1 = \underline{U}_p +\underline{I}_1 \cdot(R_1+j(X_h+X_{\sigma1}))}$\\
+    $\boxed{X_d = X_h+X_{\sigma1}}$\\
+    $\boxed{\underline{U}_1 = \underline{U}_p +\underline{I}_1 \cdot(R_1+j(X_h+X_{\sigma1}))}$
+    $\boxed{\phi = \angle\underline{I}_1 \underline{U}_1}$
+    $\boxed{\vartheta = \angle\underline{U}_1\underline{U}_p}$
+    $\boxed{\underline{I}_1 = j\cdot \frac{\underline{U}_p-\underline{U}_1}{X_d}}$
+    $\boxed{U_x = j\cdot\underline{I}_1\cdot X_d}$\\
+    $\boxed{\underline{I}_1= \frac{S}{3\cdot \underline{U}_1}}$
+    $\boxed{\frac{I_e}{I_{e0}}=\frac{U_p}{U_1}}$
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.55\columnwidth}
+    \begin{tabular}{@{} l p{3.5cm} l @{}}
+    $[U_1]$      & Klemmenspannung \dotfill & $\text{V}$ \\
+    $[U_p]$      & Polradspannung \dotfill & $\mathrm{V}$ \\
+    $[U_x]$      & Spannung über $X_d$ \dotfill& $\mathrm{V}$\\
+    $[I_1]$ & Statorstrom \dotfill& $\mathrm{A}$ \\
+    $[X_h]$  & Hauptreaktanz \dotfill& $\mathrm{H}$\\
+    $[X_{\sigma1}]$   & Streureaktanz \dotfill& $\mathrm{H}$\\
+    $[X_d]$  & Synchronreaktanz \dotfill& $\mathrm{H}$\\
+    $[\phi]$  & Phasenverschiebung \dotfill& $\mathrm{rad/^\circ}$\\
+    $[\vartheta]$  & Polradwinkel \dotfill& $\mathrm{^\circ}$\\
+    $[S]$ & Scheinleistung \dotfill& $\mathrm{VA}$\\
+    $[I_e]$ & Nennerregerstrom \dotfill& $\mathrm{A}$\\
+    $[I_{e0}]$ & Leerelauferregerstrom \dotfill& $\mathrm{A}$\\
+\end{tabular}
+\end{minipage}\\
+\includegraphics[width=1\columnwidth]{images/Leistungsdiagramm.png}
+\begin{center}
+    Leistungsdiagramm
+\end{center}
 
 
+\columnbreak
+\subsection{Drehmoment, Kippmoment, Stabilitätsgrenze, Leistung}
+\begin{minipage}[c]{1\columnwidth}
+    \begin{itemize}
+        \item Im Normalbetrieb $\vartheta \approx 30^\circ$ (Turbogenerator), $\vartheta = 20 - 25^\circ$ (Schenkelpolmaschine)
+        \item Nenndrehmoment etwa halb so gross wie Kippmoment($\sin30^\circ = 1/2$)
+        \item Sicherheitsmarge für transiente Vorgänge: $\vartheta$ zwischen $70 - 80^\circ$
+    \end{itemize}
 
-\subsection{Wasserfassung}
-Wird hier nicht erläutert.
+\end{minipage}
+\begin{minipage}[c]{0.45\columnwidth}
+    $\boxed{P_1 = |\underline{U}_1| \cdot |\underline{I}_1|\cdot\cos\phi}$\\
+    $\boxed{P_1 = \frac{|\underline{U}_1|}{X_d} \cdot \sin\vartheta}$\\
+    $\boxed{P_{tot}= 3\cdot P_1}$
+    $\boxed{P_{tot}=P_{mech} = \Omega\cdot M = \frac{\omega}{p} \cdot M}$
+    $\boxed{M  = P_{tot} \cdot \frac{p}{\omega} = 3\cdot|\underline{U_1}|\frac{|\underline{U_p}|}{X_d}\sin\vartheta\cdot\frac{p}{\omega}  }$
+    $\boxed{M_k  = 3\cdot |\underline{U_1}| \frac{|\underline{U_p}|}{X_d}\frac{p}{\omega}\Rightarrow\vartheta=90^\circ}$
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.55\columnwidth}
+    \begin{tabular}{@{} l p{3.2cm} l @{}}
+    $[U_1]$      & Klemmenspannung \dotfill & $\text{V}$ \\
+    $[U_p]$      & Polradspannung \dotfill & $\mathrm{V}$ \\
+    $[I_1]$ & Statorstrom \dotfill& $\mathrm{A}$ \\
+    $[X_d]$  & Synchronreaktanz \dotfill& $\mathrm{H}$\\
+    $[\phi]$  & Phasenverschiebung \dotfill& $\mathrm{rad/^\circ}$\\
+    $[\vartheta]$  & Polradwinkel \dotfill& $\mathrm{^\circ}$\\
+    $[P]$  & Leisung an $\mathrm{L_1}$ \dotfill& $\mathrm{W}$\\
+    $[P_{tot}]$  & Gesamtleisung \dotfill& $\mathrm{W}$\\
+    $[P_{mech}]$  & Mechanische Leistung \dotfill& $\mathrm{W}$\\
+    $[\Omega]$  & Kreisfrequenz Rotor \dotfill& $\mathrm{rad/s}$\\
+    $[\omega]$  & Kreisfrequenz \dotfill& $\mathrm{rad/s}$\\
+    $[p]$  & Polpaarzahl \dotfill& $-$\\
+    $[M]$  & Drehmoment \dotfill& $\mathrm{Nm}$\\
+    $[M_k]$  & Kippmoment $|\vartheta| > 90^\circ$ \dotfill& $\mathrm{Nm}$\\
+    
+    
+    
+\end{tabular}
+\end{minipage}\\
 
+\subsection{Zeigerdiagramm}
+\begin{minipage}[t]{0.5\columnwidth}
+    \begin{itemize}
+        \item Verbraucherzählpfeilsystem: Beim Generatorbetrieb zeigt $I_1$ in die andere Richtung als $U_1$
+        \item $U_x = j\cdot I_1\cdot X_d$ ist die Spannung an der Synchronreaktanz (immer senkrecht zu $I_1$
+        \item Erregerstrom $I_E$ immer senkrecht zu $U_p$
+    \end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.5\columnwidth}
+    \begin{itemize}
+        \item Sind $U_1$, $I_1$ und $X_d$ gegeben können $U_x$, $U_p$ und $\vartheta$ konstruktiv) bestimmt werden.
+        \item Polradwinkel $\vartheta>0$: Motorbetrieb, $\vartheta<0$:Generatorbetrieb
+        \item Polradwinkel wächst mit Belastung
+        \item $\phi>0$: Übererregt, $\phi<0$: Untererregt
+    \end{itemize}
+    \vfill
+\end{minipage}
+\includegraphics[width=0.98\columnwidth, align=c]{images/Maschinen.png}
+
+\begin{tabular}{l l l l l l}
+    $[U_{n}]$  & Verkettete Spannung & $\mathrm{V}$ &   
+    $[U_{1}]$  & Strangspannung $U_{1} = \frac{U_n}{\sqrt{3}}$   & $\mathrm{V}$ \\  
+    $[X_d]$  & Synchronreaktanz  & $\mathrm{\Omega}$ &
+    $[I_1]$  & Strangstrom & $\mathrm{A}$ \\
+    $[\varphi/\phi]$  & Phasenwinkel  & $\mathrm{^\circ}$ &
+    $[\vartheta]$  & Polradwinkel & $\mathrm{^\circ}$ \\
+    $[I_E]$  & Erregerstrom  & $\mathrm{A}$ & $[U_{p}]$&Polradspannung&$\mathrm{V}$\\
+    $[U_x]$ & Spannung über $X_d$ &$\mathrm{V}$&&&\\
+\end{tabular}\\
+\includegraphics[width=1\linewidth]{images/ErsatzschaltbildSM.png}
+\columnbreak
+\textbf{Beispiel Übererregter Generator}\\
+Gegeben: \\
+Vekettete Spannung $U_n = 13\, \mathrm{kV}$,
+Scheinleistung $S = 100~\mathrm{MVA}$, 
+$\cos{\varphi} = 0.87 $, Synchrone Längsreaktanz $X_d =140\, \mathrm{\%}$, Subtransiente Reaktanz  $X_d''=15\, \mathrm{\%}$, Leerlauf Erregerstrom $I_{E0}$, Drehzahl $n=600\, \mathrm{u/min}$\\
+Gesucht:\\
+Polradwinkel $\vartheta$, Polradspannung $U_p$, Erregerstrom $I_{En}$ für $X_h\approx const.$, Polpaarzahl $p$,  Anfangskurzschlusswechselstrom $I_k''$\\
+Lösung:\\
+$U_{1}=\frac{U_n}{\sqrt{3}} =\frac{13~\mathrm{kV}}{\sqrt{3}} = 7.5\, \mathrm{kV} \quad$
+$X_n = X_d\cdot\frac{U_n^2}{S} = 1.4\cdot\frac{(23~\mathrm{kV})^2}{100~\mathrm{MVA}}=2.365\, \mathrm{\Omega}$\\
+$I_{1} = \frac{S}{3\cdot U_{1}} = \frac{100~MVA}{3 \cdot 7.5~kV} = 4.441~kA$\\
+$U_x=jX_n \cdot I_{1}= 2.37~\Omega \cdot 4.441~kA = 10.53~kV$\\
+$\Rightarrow$ $U_x$ In Zeigerdiagramm mit Winkel $\varphi$ gegenüber $U_1$ eintragen, $U_p$ und $\vartheta$ auslesen.\\
+$\Rightarrow$ $U_p = 15.5\, \mathrm{kV}$, $\vartheta = 35\, \mathrm{^\circ}$\\
+$I_{En} = I_{E0}\cdot\frac{U_p}{U_1}= 400\, \mathrm{A}\cdot\frac{15.5\, \mathrm{kV}}{7.5\, \mathrm{kV}} = 826\, \mathrm{A}$\\
+$p = \frac{60\cdot f}{n}= \frac{60\, \mathrm{min/s}\cdot 50\, \mathrm{Hz}}{600\, \mathrm{u/min}} = 5$\\
+$X_n''=X_d''\cdot\frac{U_n^2}{S}$\\
+$I_k''=\frac{U_1}{X_n''}$
+
+\includegraphics[width=0.85\columnwidth, align=c]{images/Maschinen2.png}\hfill\\
+
+
+Verbesserung Wirkleistungsabgabe $\Rightarrow$ Turbinenregulierung\\
+Verbesserung Blindleistungsabgabe $\Rightarrow$ SM-Erregung
